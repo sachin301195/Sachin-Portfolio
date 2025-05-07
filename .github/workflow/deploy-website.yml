@@ -3,7 +3,7 @@ name: Deploy Website to AWS S3
 on:
   push:
     branches:
-      - main  # Or your primary branch name (e.g., master)
+      - main  
     paths:
       - 'website/**'  # Only run if changes are made within the /website directory
 
