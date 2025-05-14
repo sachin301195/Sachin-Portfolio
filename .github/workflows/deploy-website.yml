@@ -3,9 +3,9 @@ name: Deploy Website to AWS S3
 on:
   push:
     branches:
-      - main  
+      - main
     paths:
-      - 'website/**'  # Only run if changes are made within the /website directory
+      - 'website/**' # Only run if changes are made within the /website directory
 
   workflow_dispatch: # Allows you to trigger this workflow manually from the Actions tab in GitHub
 
@@ -14,22 +14,39 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: "ca-central-1"     
-      S3_BUCKET_NAME: "sachinbulchandani-portfolio"  
+      AWS_REGION: "ca-central-1"
+      S3_BUCKET_NAME: "sachinbulchandani-portfolio"
+
+    defaults: # Add defaults to specify working directory for subsequent steps
+      run:
+        working-directory: ./website # Set the working directory to ./website
 
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v4 # Updated to v4 for latest features
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Or your preferred Node.js version
+
+      - name: Install dependencies and Build Tailwind CSS
+        # working-directory: ./website # Specify working directory here OR use defaults (as above)
+        run: |
+          npm ci 
+          npm run build:tailwind
+          echo "Tailwind CSS build complete."
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4 # Updated to v4
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy static site to S3
+        # working-directory: ./website # S3 sync path is relative to repo root if not specified
         run: |
-          aws s3 sync ./website s3://${{ env.S3_BUCKET_NAME }} --delete
+          aws s3 sync ./website s3://${{ env.S3_BUCKET_NAME }} --delete 
           echo "Deployment to S3 complete."
           echo "You can access your site at: http://${{ env.S3_BUCKET_NAME }}.s3-website.${{ env.AWS_REGION }}.amazonaws.com"
