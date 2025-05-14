@@ -47,6 +47,6 @@ jobs:
       - name: Deploy static site to S3
         # working-directory: ./website # S3 sync path is relative to repo root if not specified
         run: |
-          aws s3 sync ./website s3://${{ env.S3_BUCKET_NAME }} --delete 
+          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }} --delete 
           echo "Deployment to S3 complete."
           echo "You can access your site at: http://${{ env.S3_BUCKET_NAME }}.s3-website.${{ env.AWS_REGION }}.amazonaws.com"
