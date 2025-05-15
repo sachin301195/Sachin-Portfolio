@@ -2,8 +2,9 @@
 node_modules/
 npm-debug.log
 
-# Generated CSS files (if rebuilt during CI/CD)
+# Tailwind CSS output files
 css/tailwind-build.css
+css/tailwind-runtime.css
 
 # Editor and IDE files
 .vscode/
