@@ -4,7 +4,9 @@ npm-debug.log
 package-lock.json
 
 # Generated CSS files (if rebuilt during CI/CD)
+css/tailwind-runtime.css
 css/tailwind-build.css
+
 
 # Editor and IDE files
 .vscode/
