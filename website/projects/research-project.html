@@ -62,12 +62,243 @@
             <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">A deep dive into optimizing industrial routing using PPO-based reinforcement learning</p>
         </div>
 
-        <!-- Main Content Card -->
+        <!-- Main Content Card - Updated with Blog Content -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
-            <div class="tw-prose dark:tw-prose-invert tw-max-w-none">
-                <p class="tw-text-center tw-text-gray-900 dark:tw-text-gray-100">Main content starts here, below the fixed header.</p>
+
+            <div class="tw-flow-root tw-mb-8"> 
+
+                <!-- {/* Image Container - Floated to the left on medium screens and up */} -->
+                <div class="tw-w-full sm:tw-w-[45%] md:tw-w-[50%] lg:tw-w-[60%] sm:tw-float-left sm:tw-mr-6 tw-mb-4 sm:tw-mb-2">
+                    <!-- {/*
+                        - tw-w-full: Full width on extra-small screens (stacked).
+                        - sm:tw-w-[45%]: Takes 45% width on small screens and up, adjust as you like.
+                        - sm:tw-float-left: Floats left on small screens and up.
+                        - sm:tw-mr-6: Adds right margin when floated for spacing.
+                        - tw-mb-4 sm:tw-mb-2: Bottom margin, reduced when floated.
+                    */} -->
+                    <img src="../assets/images/home/FMS.png"
+                         alt="Factory Conveyor System Model"
+                         class="tw-w-full tw-h-auto tw-object-contain tw-rounded-lg tw-shadow-sm" />
+                </div>
+        
+                <!-- {/* Text Content - This will now wrap around the floated image */} -->
+                <div>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                        Ever wondered how factories could optimize material flow? During my research at Technische Hochschule Ostwestfalen-Lippe, I tackled this challenge in Flexible Manufacturing Systems (FMS) using advanced Reinforcement Learning (RL) techniques. This project explores how an AI agent can learn to make smarter routing decisions, significantly reducing delays and boosting efficiency. Let's dive into how it was done!
+                    </p>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                        The core of this work involved creating a sophisticated simulation of an FMS and training an RL agent, specifically using the Proximal Policy Optimization (PPO) algorithm, to navigate this complex environment. The goal was not just to find a single optimal path, but to develop an adaptive agent capable of handling various production scenarios and order sizes, a concept explored through joint learning techniques. This page details the methodology, key findings, and the promising results achieved in enhancing operational efficiency. If this text were much longer, you would see it continue below the image, using the full width of this container once it clears the floated image's height.
+                    </p>
+                </div>
             </div>
+
+            <!-- {/* Technologies Used Section */} -->
+            <div class="tw-text-center tw-my-8 md:tw-my-12"> 
+
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-6">
+                    Technologies Used
+                </h3>
+
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-x-6 tw-gap-y-4 md:tw-gap-x-8">
+                    <!-- {/*
+                        - tw-flex: Enables flexbox.
+                        - tw-flex-wrap: Allows items to wrap to the next line.
+                        - tw-justify-center: Centers items on each line (if space allows) and centers the last line.
+                        - tw-items-center: Vertically aligns items in case they have different heights (good practice).
+                        - tw-gap-x-6 md:tw-gap-x-8: Horizontal gap between icons.
+                        - tw-gap-y-4: Vertical gap between icon lines when they wrap.
+                    */} -->
+
+                    <img src="../assets/images/brand-logos/python-original-wordmark.svg" alt="Python" title="Python" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/pytorch-original-wordmark.svg" alt="PyTorch" title="PyTorch" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/numpy-original-wordmark.svg" alt="NumPy" title="NumPy" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/pandas-original-wordmark.svg" alt="Pandas" title="Pandas" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/gym.png" alt="Gym" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/Ray.png" alt="Ray" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/rllib-logo.png" alt="Ray-rllib" class="tw-h-10 md:tw-h-12" />
+                    <!-- {/* Matplotlib icon can be tricky, Devicon might not have a specific one. You might need a generic chart icon or text. */} -->
+                    <img src="../assets/images/brand-logos/matplotlib-original-wordmark.svg" alt="Matplotlib" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/scikitlearn-original.svg" alt="Scikit-learn" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/seaborn.png" alt="seaborn" class="tw-h-8 md:tw-h-10" />
+                    <img src="../assets/images/brand-logos/snakes.png" alt="snakes" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/ubuntu-plain-wordmark.svg" alt="Ubuntu" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/vscode-original-wordmark.svg" alt="VSCode" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/tensorboard.png" alt="tensorboard" class="tw-h-10 md:tw-h-12" />
+
+                </div>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-4 tw-text-center">
+                Understanding Flexible Manufacturing Systems (FMS) &amp; Its Core Challenge
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                A Flexible Manufacturing System (FMS) is a sophisticated production setup designed to combine the efficiency of high-volume production lines with the adaptability of a job shop. This allows factories to simultaneously produce a mid-volume and mid-variety of products. Think of it as a highly automated system where workstations, material handling (like conveyors and AGVs), and computer control systems work in concert. While offering incredible flexibility, designing and managing an FMS, particularly its intricate material handling processes, presents significant operational challenges. The routing of materials between different workstations is crucial for maintaining efficiency.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                A critical pain point within these systems, and the primary challenge this research addresses, is the inefficiency inherent in material handling. Materials can spend up to <strong class="tw-font-semibold">80% of their total time</strong> on the shop floor either in transit or waiting for the next operation. These are non-value-added activities that lead to reduced throughput, decreased overall efficiency, and ultimately, lower profitability. My work focused on optimizing routing decisions within the FMS to minimize this wasted time and thereby enhance the overall production flow.
+            </p>
+            <div class="tw-my-6 tw-p-4 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg">
+                <p class="tw-text-center tw-text-lg tw-font-medium tw-text-gray-700 dark:tw-text-gray-200">
+                    <span class="tw-font-bold tw-text-red-500">Challenge Addressed:</span> Tackling the ~80% non-value-added time in FMS material handling.
+                </p>
+            </div>
+
+            <!-- {/* The next heading would then be "The Approach: Reinforcement Learning for Smart Routing" */} -->
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-4 tw-text-center">
+                The Approach: Reinforcement Learning for Smart Routing
+            </h2>
+
+            <div class="tw-flow-root tw-mb-6"> 
+                <figure class="tw-w-full sm:tw-w-[45%] md:tw-w-[40%] lg:tw-w-[35%] sm:tw-float-right sm:tw-ml-6 tw-mb-4 sm:tw-mb-2">
+                    <img src="../assets/images/projects/Reinforcement_Learning.png" alt="Reinforcement Learning World: Agent, Environment, State, Action, Reward" class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain" />
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: The Reinforcement Learning Interaction Loop.
+                    </figcaption>
+                </figure>
+
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                    To address this complex routing optimization problem, I turned to Reinforcement Learning (RL), an area of Artificial Intelligence where an 'agent' learns to make optimal decisions by interacting with an environment and receiving rewards or penalties for its actions. The chosen algorithm was Proximal Policy Optimization (PPO), a state-of-the-art policy gradient method known for its stability and performance in challenging scenarios. The core idea was to train an RL agent that could dynamically decide the best path for each material based on the current state of the FMS.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                    This involves the agent observing the system's state (S<sub>t</sub>), taking an action (a<sub>t</sub>), and receiving feedback (reward r<sub>t+1</sub>) based on how that action contributes to the overall goal of minimizing production time. The entire process operates under the Markov Decision Process (MDP) assumption, meaning the current state holds all relevant information from past states and actions. The first crucial step in this research was to create a detailed and interactive simulated FMS environment where this learning could effectively take place.
+                </p>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Simulating the FMS: The Petri-Net Environment
+            </h2>
+
+            <div class="tw-flow-root tw-mb-6"> 
+
+                <figure class="tw-w-full sm:tw-w-[50%] md:tw-w-[50%] lg:tw-w-[60%] sm:tw-float-left sm:tw-mr-6 tw-mb-4 sm:tw-mb-2">
+                    <img src="../assets/images/projects/Petrinet.png" 
+                         alt="Petri-Net model showing three conveyors (E, F, G) connected by node N3" 
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white" />
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Detail of the Petri-Net model illustrating interconnected conveyors.
+                    </figcaption>
+                </figure>
+
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                    To create a realistic and manageable simulation of the Flexible Manufacturing System for the RL agent, I utilized Petri-nets – a powerful graphical and mathematical modeling tool well-suited for systems with concurrent and asynchronous operations. In my model, 'places' (circles) represent system states or specific locations like points on a conveyor or workstations. 'Transitions' (bars/rectangles) signify events or actions, such as moving a part, while 'tokens' (dots) represent the materials or pallets flowing through the FMS. The image here illustrates a segment of this model, showing how multiple conveyors (labeled E, F, and G) interconnect at a decision node (N3), allowing tokens to be routed dynamically.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                    The complete simulated FMS comprised two main workstations (W1 and W2) linked by a network of 18 bi-directional conveyors and ten such decision nodes, capable of processing up to 15 distinct product types. This entire environment was implemented in Python using the "Snakes" library. To foster robust learning and adaptability in the RL agent, four different versions of this FMS environment (Environments A, B, C, and D) were developed. These versions introduced variations in job initialization logic, system capacity constraints, and randomness in material arrivals, pushing the agent to generalize its routing strategies through a joint learning approach.
+                </p>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Training the AI: The Learning Process & Strategy
+            </h2>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The core of the training process involved teaching the Reinforcement Learning agent, powered by the Proximal Policy Optimization (PPO) algorithm, to make optimal routing decisions within the simulated FMS environments. This was achieved by carefully defining how the agent perceives its environment and how it's rewarded for its actions.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3 tw-text-center">
+                Agent's Perception and Actions
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The agent operated within a discrete action space, allowing it to choose one of four primary actions at any decision point: move up, right, down, or left. To prevent the agent from selecting impossible moves (e.g., moving into a non-existent path or a blocked conveyor), a technique called "action masking" was employed. This effectively guided the agent by only presenting valid actions based on the current state of the FMS.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The agent's "observation" of the environment at each time step was comprehensive. It included a state vector detailing the occupancy of all 63 places in the Petri-net model, specific attributes of the material (token) currently being routed (such as its current processing status, final destination/recipe, and movement count), and the action mask indicating permissible moves. This rich set of information allowed the agent to make informed decisions.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3 tw-text-center">
+                Reward Mechanism and Joint Learning
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                A meticulously constructed reward function was crucial for guiding the agent's learning. The function was designed to penalize inefficient actions, such as excessive movement (tracked by a 'count' variable), errors like attempting to move a token to an already occupied place, or an object taking too long to complete its processing. Conversely, the agent received positive rewards for successfully processing and terminating an object, with a significant global reward upon the successful completion of all objects in a given order. This reward structure incentivized the agent to find the most efficient routes.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                To ensure the agent was robust and could generalize across different manufacturing scenarios, a "joint learning" strategy was adopted. This involved training a single RL policy simultaneously across the four different FMS environment versions (A, B, C, and D), each presenting unique challenges in terms of job initialization and system capacity. The training was performed for 100 iterations, with each iteration involving 4000 simulation time steps distributed across 32 parallel workers on an Nvidia DGX server. The performance was analyzed by monitoring the cumulative reward and the mean episode completion time.
+            </p>
+
+            <figure class="tw-my-8">
+                <img src="../assets/images/projects/RL_Training_Rouing.png" 
+                     alt="Training Results Graph showing Episode Mean Reward and Mean Completion Time vs. Training Steps" 
+                     class="tw-w-full tw-max-w-xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain" />
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: Training results for an order of 8 objects using the joint learning strategy.
+                </figcaption>
+            </figure>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Key Results: Demonstrating Efficiency Gains
+            </h2>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The performance of the trained Reinforcement Learning agents was rigorously evaluated. A key comparison was made between a "Normal Agent" (trained on a single FMS configuration, specifically an order size of 6 objects in Environment A) and the "Meta-Agent" (trained using the joint learning approach across all four FMS environment versions with an order size of 8 objects).
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3 tw-text-center">
+                Normal Agent vs. Meta-Agent Performance
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The Normal Agent, while performing adequately on its specific training configuration (6 objects), showed poor generalization when tested on different order sizes (e.g., 4 objects). This highlighted the necessity for a more adaptive approach.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                The Meta-Agent, benefiting from joint learning, demonstrated significantly better performance and adaptability. For instance, when evaluating on an order of 6 objects, the Meta-Agent achieved an average completion time of approximately <strong class="tw-font-semibold">4.09 seconds per object</strong>, compared to the Normal Agent's <strong class="tw-font-semibold">5.7 seconds per object</strong>. For an order of 4 objects, the Meta-Agent averaged <strong class="tw-font-semibold">3.53 seconds per object</strong>, while the Normal Agent struggled at <strong class="tw-font-semibold">11.6 seconds per object</strong>. The Meta-Agent also performed well on larger order sizes, like 20 and 63 objects, maintaining an average completion time close to <strong class="tw-font-semibold">3.5 to 3.96 seconds per object</strong>.
+            </p>
+
+            <figure class="tw-my-8">
+                <img src="../assets/images/projects/Table_results.png" 
+                     alt="Bar Chart Comparison: Normal Agent vs. Meta-Agent Average Completion Time per Object for different order sizes" 
+                     class="tw-w-full tw-max-w-xl lg:tw-max-w-2xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain" />
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: Comparison of average completion times.
+                </figcaption>
+            </figure>
+            
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                Across all tested configurations with the Meta-Agent, the average production time for a single object was approximately <strong class="tw-font-semibold">3.78 seconds</strong> (which translates to 37.8 simulation steps). Considering the optimal theoretical number of steps for a single object is 31, this result is quite promising, especially given the complexity of managing multiple objects simultaneously within the dynamic FMS environment.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-8 tw-mb-3 tw-text-center">
+                Meta-Agent Performance Across Different Job Recipes
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                The Meta-Agent's effectiveness was also evaluated across all 15 different job recipes (product types) for an order size of 8 objects. The average completion time per episode for these specific job types ranged from approximately 26.74 to 33.32 seconds, demonstrating consistent performance regardless of the product's specific processing requirements. This further underscores the agent's ability to generalize its learned routing policies.
+            </p>
+
+            <figure class="tw-my-8">
+                <img src="../assets/images/projects/Performace_JointLearning.png" 
+                     alt="Line Graph: Meta-Agent Evaluation Performance across 15 different job types for an order of 8 objects" 
+                     class="tw-w-full tw-max-w-xl lg:tw-max-w-2xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain" />
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: Meta-Agent performance across various job recipes.
+                </figcaption>
+            </figure>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Limitations and Future Directions
+            </h2>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                While the Proximal Policy Optimization (PPO) algorithm, combined with joint learning, yielded promising results in optimizing the FMS routing problem, certain limitations inherent to the approach were noted. PPO is an online policy learning algorithm, meaning it primarily learns from the current set of experiences and policies without an explicit mechanism to store and recall extensive past experiences. This characteristic can sometimes make it challenging for the agent to consistently converge to the global optimum, especially given the stochastic nature and variability of the FMS environments it interacts with. The agent's performance, while good, could potentially be further improved.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                Looking ahead, several avenues could be explored to build upon this research. One promising direction is the implementation of more advanced meta-Reinforcement Learning algorithms, such as Model-Agnostic Meta-Learning (MAML). MAML is designed to train an agent that can quickly adapt to new tasks or variations with minimal additional experience. Another potential enhancement involves exploring hierarchical multi-agent learning architectures. Such a system could feature a global model that learns overarching strategies from various local models, each specializing in specific aspects of the FMS or different environment configurations. This could potentially lead to even more robust and adaptive routing solutions.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Conclusion: Key Achievements and Impact
+            </h2>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This research successfully presented and validated an advanced Reinforcement Learning architecture, specifically utilizing Proximal Policy Optimization (PPO) with a joint learning strategy, to effectively optimize the complex material handling processes within a Flexible Manufacturing System. It was demonstrated that an RL agent trained with this approach could significantly improve operational efficiency by intelligently routing materials.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                The key outcome was the development of a "Meta-Agent" capable of generalizing its learned policies across various FMS configurations and product order sizes, a notable improvement over agents trained on single, fixed scenarios. The Meta-Agent achieved an average production time for a single object of approximately <strong class="tw-font-semibold">3.78 seconds (37.8 simulation steps)</strong>. This performance is commendably close to the theoretical optimal of 31 steps, especially considering the dynamic and simultaneous movement of multiple objects within the system. This project underscores the potential of applying sophisticated AI techniques like deep RL to solve tangible, real-world industrial challenges, paving the way for more adaptive and efficient manufacturing operations.
+            </p>
+
+            <blockquote class="tw-mt-8 tw-mb-6 tw-p-4 tw-italic tw-border-l-4 tw-border-blue-500 dark:tw-border-blue-400 tw-bg-gray-100 dark:tw-bg-gray-800 tw-text-gray-700 dark:tw-text-gray-300 tw-rounded-r-md">
+                <p class="tw-mb-0">“The best way to predict the future is to create it.”</p>
+                <footer class="tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-1">- Peter Drucker</footer>
+            </blockquote>
         </div>
+  
     </main>
 
     <!-- Footer -->
