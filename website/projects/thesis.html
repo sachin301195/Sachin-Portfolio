@@ -54,14 +54,287 @@
         <!-- Project Header Section -->
         <div class="tw-mb-12 tw-text-center">
             <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Master's Thesis: Intelligent Job Scheduling with GNN-RL</h1>
-            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">Exploring Graph Neural Networks and Reinforcement Learning for Job Shop Scheduling.</p>
+            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">Developing an efficient solution for the complex Job-Shop Scheduling Problem using Graph Neural Networks and Reinforcement Learning.</p>
         </div>
 
         <!-- Main Content Card -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
-            <div class="tw-prose dark:tw-prose-invert tw-max-w-none">
-                <p class="tw-text-center tw-text-gray-900 dark:tw-text-gray-100">Main content starts here, below the fixed header.</p>
+            <div class="tw-flow-root tw-mb-8">
+                <div class="tw-w-full sm:tw-w-[45%] md:tw-w-[50%] lg:tw-w-[55%] sm:tw-float-left sm:tw-mr-6 tw-mb-4 sm:tw-mb-2">
+                    <img src="../assets/images/projects/JSSP.png" alt="Disjunctive Graph Representation of a 3x3 JSSP instance"
+                         class="tw-w-full tw-h-auto tw-object-contain tw-rounded-lg tw-shadow-sm tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Disjunctive graph for a 3x3 JSSP instance, guiding the scheduling process.
+                    </figcaption>
+                </div>
+
+                <div>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                        Imagine a bustling factory where machines hum, workers hustle, and orders pile up. The challenge? Scheduling tasks so everything runs smoothly, products are delivered on time, and costs stay low. This is the Job-Shop Scheduling Problem (JSSP), a puzzle that’s been a headache for industries like manufacturing, logistics, and even computer networking. With modern demands for customized products and smaller batch sizes, finding an efficient schedule is tougher than ever.
+                    </p>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                        In my Master’s thesis at TH OWL, I tackled this problem using a cutting-edge combo: Graph Neural Networks (GNN) and Reinforcement Learning (RL). My goal was to create an intelligent system that learns to schedule tasks optimally, reducing the total time (or makespan) needed to complete all jobs. This page takes you through my journey—why JSSP matters, how I built my solution, and what I learned along the way.
+                    </p>
+                </div>
             </div>
+
+            <div class="tw-text-center tw-my-8 md:tw-my-12"> 
+
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-6">
+                    Core Technologies Utilized
+                </h3>
+
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-x-6 tw-gap-y-4 md:tw-gap-x-8">
+                    <!-- {/*
+                        - tw-flex: Enables flexbox.
+                        - tw-flex-wrap: Allows items to wrap to the next line.
+                        - tw-justify-center: Centers items on each line (if space allows) and centers the last line.
+                        - tw-items-center: Vertically aligns items in case they have different heights (good practice).
+                        - tw-gap-x-6 md:tw-gap-x-8: Horizontal gap between icons.
+                        - tw-gap-y-4: Vertical gap between icon lines when they wrap.
+                    */} -->
+
+                    <img src="../assets/images/brand-logos/python-original-wordmark.svg" alt="Python" title="Python" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/pytorch-original-wordmark.svg" alt="PyTorch" title="PyTorch" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/numpy-original-wordmark.svg" alt="NumPy" title="NumPy" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/pandas-original-wordmark.svg" alt="Pandas" title="Pandas" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/NetworkX.svg" alt="NetworkX" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/gym.png" alt="Gym" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/Ray.png" alt="Ray" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/rllib-logo.png" alt="Ray-rllib" class="tw-h-10 md:tw-h-12" />
+                    <!-- {/* Matplotlib icon can be tricky, Devicon might not have a specific one. You might need a generic chart icon or text. */} -->
+                    <img src="../assets/images/brand-logos/matplotlib-original-wordmark.svg" alt="Matplotlib" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/scikitlearn-original.svg" alt="Scikit-learn" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/seaborn.png" alt="seaborn" class="tw-h-8 md:tw-h-10" />
+                    <img src="../assets/images/brand-logos/EC2.svg" alt="AWS EC2" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/ubuntu-plain-wordmark.svg" alt="Ubuntu" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/vscode-original-wordmark.svg" alt="VSCode" class="tw-h-10 md:tw-h-12" />
+                    <img src="../assets/images/brand-logos/tensorboard.png" alt="tensorboard" class="tw-h-10 md:tw-h-12" />
+
+                </div>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-4 tw-text-center">
+                What is Job-Shop Scheduling?
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                Picture a busy restaurant kitchen during dinner rush. Each chef (machine) can only handle one dish (task) at a time, and each dish has steps (operations) that must be done in order—say, chopping veggies before cooking. The goal is to finish all dishes as quickly as possible. That’s JSSP in a nutshell.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                Formally, JSSP involves scheduling jobs (sets of tasks) on machines to minimize the total time taken (makespan). Each job has a sequence of operations, each requiring a specific machine for a fixed time, and machines can’t multitask. It’s a notoriously tough problem (NP-hard, for the nerds out there), meaning finding the perfect schedule is computationally intense.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                To model JSSP, we use a disjunctive graph, where nodes represent tasks (operations), and edges show dependencies (conjunctive arcs for task sequences within a job) or conflicts (disjunctive arcs for tasks needing the same machine). Solving JSSP is equivalent to finding an orientation for all disjunctive arcs such that the resulting graph is a Directed Acyclic Graph (DAG) representing a feasible schedule.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                The Approach: AI for Intelligent Scheduling
+            </h2>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                Traditional methods for JSSP, like exact algorithms or simple rules (heuristics) such as Shortest Processing Time (SPT), have limitations. Exact methods can be too slow for large, complex problems, and heuristics don't always find the globally optimal solution. This is where Artificial Intelligence (AI), particularly the combination of Reinforcement Learning (RL) and Graph Neural Networks (GNNs), offers a promising alternative.
+            </p>
+
+            <div class="tw-flow-root tw-mb-6">
+                <figure class="tw-w-full sm:tw-w-[45%] md:tw-w-[40%] lg:tw-w-[35%] sm:tw-float-right sm:tw-ml-6 tw-mb-4 sm:tw-mb-2">
+                    <img src="../assets/images/projects/Reinforcement_Learning.png" alt="Reinforcement Learning Interaction Loop for JSSP"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: The Reinforcement Learning Interaction Loop. The GNN-RL agent learns by interacting with the JSSP environment.
+                    </figcaption>
+                </figure>
+
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                    <strong>Reinforcement Learning (RL)</strong> is akin to training an intelligent agent to make a sequence of decisions. The agent learns by interacting with an environment (in this case, the JSSP), taking actions (e.g., scheduling a specific task), and receiving feedback in the form of rewards or penalties. The goal is to develop a policy—a strategy for choosing actions—that maximizes the cumulative reward, which, for JSSP, is tied to minimizing the makespan.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-3 tw-text-justify">
+                    <strong>Graph Neural Networks (GNNs)</strong> are a class of neural networks specifically designed to operate on graph-structured data. This makes them exceptionally well-suited for JSSP, which can be naturally represented as a disjunctive graph. GNNs can process the complex relationships within this graph—task dependencies, machine constraints, and processing times—to generate rich, informative embeddings (vector representations) of the tasks and the overall system state.
+                </p>
+            </div>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                Together, GNNs and RL form a powerful synergy for tackling JSSP. The GNN acts as a sophisticated feature extractor, capturing the intricate structure and current state of the scheduling problem from the disjunctive graph. These learned representations are then fed to the RL agent, enabling it to make more informed decisions and learn effective scheduling policies through iterative interaction and feedback. This combined approach moves beyond predefined rules, allowing the system to discover complex strategies for optimizing job schedules.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Methodology: Building the GNN-RL Solution
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                The core of this thesis was to develop an intelligent agent capable of learning to solve the Job-Shop Scheduling Problem (JSSP) by combining Graph Neural Networks (GNNs) with Reinforcement Learning (RL). Here’s a breakdown of the approach:
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                1. Environment Setup: The JSSP as a Markov Decision Process (MDP)
+            </h3>
+
+            <div class="tw-flow-root tw-mb-6">
+                <figure class="tw-w-full sm:tw-w-[60%] md:tw-w-[65%] lg:tw-w-[60%] sm:tw-float-right sm:tw-ml-6 tw-mb-4 sm:tw-mb-2 mx-auto">
+                    <img src="../assets/images/projects/State_Transition.png" alt="State transition diagram in the JSSP environment"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: State transition for a JSSP instance. The RL agent's action (e.g., scheduling operation O<sub>32</sub>) updates the disjunctive graph.
+                    </figcaption>
+                </figure>
+
+                
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                    To apply RL, the JSSP was formulated as a Markov Decision Process (MDP):
+                </p>
+                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-text-justify">
+                    <li><strong>State (S<sub>t</sub>):</strong> The state at any time step <i>t</i> is primarily represented by the current disjunctive graph G(t). This includes the graph embedding, along with features for each operation such as its machine ID, processing time (p<sub>i,j</sub>), current lower bound (finish time if scheduled), and status (scheduled or not). An action mask is also part of the observation to denote valid actions.</li>
+                    <li><strong>Action (A<sub>t</sub>):</strong> The agent selects an operation to be scheduled next from the set of available operations.</li>
+                    <li><strong>Reward (r<sub>t+1</sub>):</strong> The reward function was designed to guide the agent towards minimizing the makespan. It incorporates penalties for exceeding a predefined makespan horizon and bonuses for efficient scheduling relative to optimal known values.</li>
+                    <li><strong>Done Signal:</strong> An episode concludes when all operations are scheduled, or if the current schedule's makespan exceeds the defined horizon.</li>
+                </ul>
+
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                    2. Reinforcement Learning Algorithm: Proximal Policy Optimization (PPO)
+                </h3>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    I employed the Proximal Policy Optimization (PPO) algorithm, a state-of-the-art policy gradient method known for its stability and reliable performance in complex environments. PPO works by iteratively collecting experience from the environment and then updating the agent's policy (its decision-making strategy). It uses a clipped surrogate objective function to ensure that policy updates do not deviate too drastically from the previous policy, promoting stable learning. The architecture involved separate neural network models for the policy (actor) and value function (critic).
+                </p>
+
+                 <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                    3. GNN Integration for State Representation
+                </h3>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    A Graph Neural Network (GNN) was utilized to process the disjunctive graph representation of the JSSP instance. The GNN learns to create meaningful node embeddings (vector representations) for each operation by aggregating information from its neighbors in the graph. These embeddings, which capture the structural properties and dependencies of the JSSP, are concatenated with other operational features (like processing time and machine ID) to form the comprehensive state vector fed to the PPO agent.
+                </p>
+            </div>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                4. Technical Stack and Training Infrastructure
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The solution was developed in Python (version 3.8.12). Key libraries and frameworks included:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-mb-4 tw-text-justify">
+                <li><strong>OpenAI Gym (version 0.23.1):</strong> For creating and managing the custom JSSP environment.</li>
+                <li><strong>NetworkX (version 2.8.8):</strong> For constructing and manipulating the disjunctive graph representations of JSSP instances.</li>
+                <li><strong>Ray RLlib (version 2.1.0) with PyTorch (version 1.13.0):</strong> For implementing the PPO algorithm and the underlying neural network models (GNN, policy, and value networks).</li>
+                <li><strong>NumPy, Matplotlib, Pandas, Seaborn, Plotly:</strong> For data handling, analysis, and visualization.</li>
+            </ul>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                The RL agent was trained on an AWS EC2 instance (C5a.8xlarge), leveraging 32 parallel workers to accelerate the training process across numerous JSSP instances.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Experiments and Results
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The GNN-RL model was rigorously tested on standard Job-Shop Scheduling Problem (JSSP) instances, primarily using Taillard's benchmarks, to evaluate its performance and compare it against established heuristics.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                Experimental Setup
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                The experimental design focused on the following aspects:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-mb-4 tw-text-justify">
+                <li><strong>JSSP Instances:</strong> Standard instances of sizes 6x6, 8x8, and 10x10 were generated using Taillard's method.</li>
+                <li><strong>Action Modes:</strong> Two primary action modes for the RL agent were investigated:
+                    <ul class="tw-list-disc tw-pl-5 tw-mt-1">
+                        <li><em>Task Mode:</em> The agent selects individual tasks/operations to schedule, resulting in a larger action space ($|\mathcal{A}_t|=|\mathcal{O}|$).</li>
+                        <li><em>Job Mode:</em> The agent selects a job, and the environment then identifies the next valid task for that job, leading to a smaller action space ($|\mathcal{A}_t|=|\mathcal{J}|$).</li>
+                    </ul>
+                </li>
+                <li><strong>Reward Horizon:</strong> Experiments were conducted with and without a "horizon" in the reward function. The horizon setup penalized schedules that exceeded a predefined makespan limit (optimal makespan + 10 time units), encouraging more conservative exploration.</li>
+                <li><strong>Training Specifications:</strong> The model was trained for 1000 iterations, with each iteration comprising 4320 environment steps, totaling approximately 4.32 million environment steps. Training utilized 30 parallel actors on an AWS EC2 (C5a.8xlarge) instance. Key PPO hyperparameters included a learning rate of 1x10<sup>-5</sup> and a discount factor ($\gamma$) of 0.99.</li>
+                <li><strong>Evaluation Metrics:</strong> Performance was evaluated on 100 different instances by measuring the average makespan (C<sub>max</sub><sup>Avg</sup>) and the percentage GAP (%GAP) from the optimal makespan obtained using Google OR-Tools.</li>
+            </ul>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-8 tw-mb-3 tw-text-center">
+                Key Results and Performance
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The GNN-RL agent demonstrated promising results, particularly when compared to common dispatching heuristics:
+            </p>
+
+            <figure class="tw-my-8">
+                <img src="../assets/images/projects/Result_JSSP.png"
+                     alt="Bar Chart: GNN-RL vs Heuristics for JSSP (%GAP)"
+                     class="tw-w-full tw-max-w-xl lg:tw-max-w-2xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: Performance (%GAP from Optimal) of GNN-RL Agent vs. Standard Heuristics.
+                </figcaption>
+            </figure>
+
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-2 tw-text-justify">
+                <li><strong>Comparison with Heuristics:</strong>
+                    <ul class="tw-list-disc tw-pl-5 tw-mt-1">
+                        <li>For 6x6 instances, the GNN-RL model (Task mode, with horizon) achieved a %GAP of 12.42%, outperforming Shortest Processing Time (SPT) (12.79% GAP), Longest Processing Time (LPT) (27.92% GAP), and First In First Out (FIFO) (27.92% GAP).</li>
+                        <li>For larger 8x8 and 10x10 instances, the model performed better than LPT and FIFO but was slightly outperformed by SPT. For 10x10 instances, our model had a 22.79% GAP compared to SPT's 21.74% GAP.</li>
+                    </ul>
+                </li>
+                <li><strong>Impact of Action Mode:</strong>
+                    <ul class="tw-list-disc tw-pl-5 tw-mt-1">
+                        <li>The 'Task Mode' generally performed better than the 'Job Mode'. For 6x6 instances, Task Mode achieved a 12.42% GAP, while Job Mode resulted in an 18.72% GAP. This suggests that allowing the agent to select specific operations, despite the larger action space, led to more refined scheduling decisions.</li>
+                    </ul>
+                </li>
+                <li><strong>Effect of Reward Horizon:</strong>
+                    <ul class="tw-list-disc tw-pl-5 tw-mt-1">
+                        <li>Employing a 'horizon' in the reward function (penalizing excessively long makespans) significantly improved performance. For 6x6 instances, the model with a horizon achieved a 12.42% GAP, compared to 19.79% GAP without a horizon. This guided the agent towards more practical and efficient solutions.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-4 tw-text-justify">
+                These results indicate that the GNN-RL approach is a viable method for JSSP, demonstrating competitive performance against established heuristics, especially for smaller to moderately sized problems. The choice of action mode and reward structure also plays a crucial role in the agent's learning efficacy.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Challenges and Lessons Learned
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This research journey, while rewarding, was not without its hurdles. Training the GNN-RL agent, particularly for larger JSSP instances (like 8x8 and 10x10), proved to be computationally intensive, demanding significant resources. Due to time and computational constraints, deeper exploration into more advanced GNN architectures, such as those incorporating attention mechanisms, or delving into meta-learning approaches for broader generalization across different instance sizes, was limited.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The model demonstrated strong performance on smaller instances but showed challenges in generalizing effectively to larger, more complex scenarios without further architectural enhancements. One key observation was that while the current GNN effectively captured spatial dependencies, incorporating elements like LSTMs could potentially improve temporal understanding and generalization across varying problem scales.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                On a personal level, this project was a profound learning experience. It underscored the delicate balance required in RL between exploration (allowing the agent to discover new strategies) and exploitation (leveraging known good strategies). Witnessing the agent progressively learn and refine its scheduling policies over millions of training steps was genuinely exciting. Conversely, debugging the intricacies of graph embeddings and ensuring the stability of the learning process presented its own set of challenges. Ultimately, the project reinforced my appreciation for the power of combining domain-specific knowledge—like the structured disjunctive graph representation of JSSP—with the adaptive learning capabilities of AI.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Conclusion: Impact and Future Outlook
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This Master's Thesis successfully demonstrated that a Graph Neural Network (GNN) based Reinforcement Learning (RL) agent can effectively tackle the complex Job-Shop Scheduling Problem (JSSP). The developed learning mechanism, utilizing Proximal Policy Optimization (PPO) and a disjunctive graph representation, showed competitive performance against well-known heuristics, particularly for small to medium-sized JSSP instances. The key achievement was an agent that could learn scheduling policies by interpreting the structural information of the JSSP, aiming to minimize the overall makespan.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The results underscore the potential of applying advanced AI techniques to real-world industrial optimization challenges. By learning from the inherent structure of the problem, the GNN-RL agent offers a flexible and adaptive alternative to traditional scheduling methods. This approach not only holds promise for enhancing efficiency in manufacturing but also has broader implications for optimizing processes in logistics, computer networking, and other domains requiring sophisticated scheduling solutions.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                Future work could explore more advanced GNN architectures, incorporate attention mechanisms, or investigate meta-learning techniques to improve generalization across a wider range of problem sizes and complexities. Integrating memory elements like LSTMs could also enhance the agent's ability to handle larger instances. The continued exploration of AI-driven scheduling promises a future where intelligent systems play a pivotal role in creating highly efficient and adaptive operational environments.
+            </p>
+            <blockquote class="tw-mt-8 tw-mb-6 tw-p-4 tw-italic tw-border-l-4 tw-border-blue-500 dark:tw-border-blue-400 tw-bg-gray-100 dark:tw-bg-gray-800 tw-text-gray-700 dark:tw-text-gray-300 tw-rounded-r-md">
+                <p class="tw-mb-0">"Research is to see what everybody else has seen and to think what nobody else has thought."</p>
+                <footer class="tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-1">-  Albert Szent-Gyorgyi</footer>
+            </blockquote>
+
+
+            <!-- <div class="tw-my-8 tw-p-6 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                <h3 class="tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-4 tw-text-center">Key Information</h3>
+                <div class="tw-grid md:tw-grid-cols-2 tw-gap-x-8 tw-gap-y-4">
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Project Type:</strong> Master's Thesis
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Institution:</strong> TH OWL University of Applied Sciences and Arts 
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Department:</strong> Electrical Engineering and Computer Science 
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Date:</strong> February 2023
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Supervisors:</strong> Prof. Dr. Ing. rar. nat. Markus Lange-Hegermann, Dr. Stefan Windmann
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Collaboration:</strong> Fraunhofer IOSB-INA
+                    </div>
+                </div>
+            </div> -->
         </div>
     </main>
 
