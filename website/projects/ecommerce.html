@@ -58,15 +58,368 @@
     <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto"> 
         <!-- Project Header Section -->
         <div class="tw-mb-12 tw-text-center">
-            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">E-commerce Platform Deployed on AWS</h1>
-            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">Designing a Scalable, Multi-Tier E-commerce Solution with Microservices, EKS, and CI/CD.</p>
+            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Building a Scalable E-Commerce Platform on AWS</h1>
+            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">My graduation project journey: designing and deploying a fully functional, multi-tier e-commerce website leveraging a suite of AWS services for scalability, security, and cost-efficiency.</p>
         </div>
 
         <!-- Main Content Card -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
-            <div class="tw-prose dark:tw-prose-invert tw-max-w-none">
-                <p class="tw-text-center tw-text-gray-900 dark:tw-text-gray-100">Main content starts here, below the fixed header.</p>
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-2 tw-mb-4 tw-text-center">
+                Project Overview
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                As a graduating student, I embarked on an exciting challenge: designing and deploying a fully functional e-commerce website on AWS. This project has been a rewarding learning experience, architecting the platform by integrating a range of AWS services across multiple layers—frontend, backend, and analytics. Deployed in the <strong>us-east-2 (Ohio) region</strong> with availability zones <strong>us-east-2a</strong> and <strong>us-east-2b</strong>, I prioritized scalability and security while leveraging free-tier options to keep costs manageable; a decision I’m particularly proud of. This page details the architecture, deployment process, and key components I developed.
+            </p>
+
+            <div class="tw-my-8 tw-p-6 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                <h3 class="tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-4 tw-text-center">Key Information</h3>
+                <div class="tw-grid md:tw-grid-cols-2 tw-gap-x-8 tw-gap-y-4">
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Project Type:</strong> Graduation Project
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Core Focus:</strong> Cloud Architecture (AWS), Microservices, Kubernetes (EKS), CI/CD, Scalability, Security
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Primary AWS Region:</strong> us-east-2 (Ohio)
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Disaster Recovery Region:</strong> us-east-1 (N. Virginia) (Planned)
+                    </div>
+                     <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Role:</strong> Architect & Developer
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Duration:</strong> 4 Months
+                    </div>
+                </div>
             </div>
+
+            <div class="tw-text-center tw-my-8 md:tw-my-12">
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-6">
+                    Core Technologies Utilized
+                </h3>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-x-6 tw-gap-y-4 md:tw-gap-x-8">
+                    <img src="../assets/images/brand-logos/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/kubernetes-original-wordmark.svg" alt="Kubernetes" title="Amazon EKS (Kubernetes)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/docker-original-wordmark.svg" alt="Docker" title="Docker" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/githubactions-original.svg" alt="GitHub Actions" title="GitHub Actions (CI/CD)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/vuejs-original-wordmark.svg" alt="React.js / Vue.js" title="React.js / Vue.js (Frontend)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Simple-Storage-Service.svg" alt="Amazon S3" title="Amazon S3" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/CloudFront.svg" alt="Amazon CloudFront" title="Amazon CloudFront" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Route-53.svg" alt="Amazon Route 53" title="Amazon Route 53" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/WAF.svg" alt="AWS WAF" title="AWS WAF" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Certificate-Manager.svg" alt="AWS Certificate Manager" title="AWS Certificate Manager" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/DynamoDB.svg" alt="Amazon DynamoDB" title="Amazon DynamoDB" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Aurora.svg" alt="Aurora PostgreSQL" title="Amazon Aurora PostgreSQL" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Elastic-Kubernetes-Service.svg" alt="EKS" title="Amazon Elasti Kubernetes Services" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/CloudSearch.svg" alt="Amazon OpenSearch" title="Amazon OpenSearch Service" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Simple-Notification-Service.svg" alt="Amazon SNS" title="Amazon SNS" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Simple-Queue-Service.svg" alt="Amazon SQS" title="Amazon SQS" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Elastic-Container-Registry.svg" alt="Amazon ECR" title="Amazon ECR" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/Secrets-Manager.svg" alt="AWS Secrets Manager" title="AWS Secrets Manager" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/IAM-Identity-Center.svg" alt="AWS IAM" title="AWS IAM" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/stripe.svg" alt="Stripe" title="Stripe (Payment Integration)" class="tw-h-10 md:tw-h-12"> </div>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Network Layer: VPC and Subnets
+            </h2>
+            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                <img src="../assets/images/projects/Networking.png"
+                     alt="VPC and Subnet Architecture Diagram for E-commerce Platform"
+                     class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: VPC and Subnet Diagram. </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    The foundation of the e-commerce platform is my custom Virtual Private Cloud (VPC) named <code>ecommerce-vpc</code>, configured with a CIDR block of <code>10.0.0.0/16</code>. This VPC is meticulously organized across two availability zones (us-east-2a and us-east-2b) to ensure high availability and a secure network design.
+                </p>
+                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-3 tw-mb-2 tw-text-justify">
+                    <li>
+                        <strong>Public Subnets:</strong> These (<code>10.0.1.0/24</code> in us-east-2a and <code>10.0.2.0/24</code> in us-east-2b) host the Application Load Balancer (ALB), serving as the entry point for public traffic. An Internet Gateway is attached to the VPC, enabling communication between resources in these public subnets and the internet.
+                    </li>
+                    <li>
+                        <strong>Private Subnets:</strong> These (<code>10.0.10.0/24</code> in us-east-2a and <code>10.0.11.0/24</code> in us-east-2b) house the core backend infrastructure, including Amazon EKS nodes, RDS database instances, ElastiCache for Redis, and OpenSearch clusters.
+                    </li>
+                    <li>
+                        <strong>Connectivity & Cost Savings:</strong> Private route tables are configured to use VPC Endpoints for internal traffic between resources in the private subnets and other AWS services (like S3, DynamoDB, ECR). This approach enhances security by keeping traffic within the AWS network and offers a cost-saving advantage by avoiding the need for NAT gateways for these services.
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Security Layer: Security Groups
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                Security was a top priority throughout this project. I meticulously crafted Security Groups (SGs) to act as virtual firewalls, controlling inbound and outbound traffic at the instance level for different components of the platform. The following table outlines the key security groups and their primary ingress rules:
+            </p>
+
+            <div class="tw-overflow-x-auto tw-shadow-md sm:tw-rounded-lg">
+                <table class="tw-w-full tw-text-sm tw-text-left tw-text-gray-700 dark:tw-text-gray-300">
+                    <thead class="tw-text-xs tw-text-gray-800 dark:tw-text-gray-200 tw-uppercase tw-bg-gray-200 dark:tw-bg-gray-700">
+                        <tr>
+                            <th scope="col" class="tw-px-6 tw-py-3">Security Group Name</th>
+                            <th scope="col" class="tw-px-6 tw-py-3">Primary Purpose</th>
+                            <th scope="col" class="tw-px-6 tw-py-3">Key Inbound Rules</th>
+                            <th scope="col" class="tw-px-6 tw-py-3">Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 dark:hover:tw-bg-gray-600">
+                            <td class="tw-px-6 tw-py-4 tw-font-medium">ALB SG</td>
+                            <td class="tw-px-6 tw-py-4">Application Load Balancer</td>
+                            <td class="tw-px-6 tw-py-4">HTTPS (TCP/443), HTTP (TCP/80)</td>
+                            <td class="tw-px-6 tw-py-4"><code>0.0.0.0/0</code> (Anywhere)</td>
+                        </tr>
+                        <tr class="tw-bg-gray-50 dark:tw-bg-gray-750 hover:tw-bg-gray-100 dark:hover:tw-bg-gray-650"> <td class="tw-px-6 tw-py-4 tw-font-medium">EKS Nodes SG</td>
+                            <td class="tw-px-6 tw-py-4">EKS Worker Nodes</td>
+                            <td class="tw-px-6 tw-py-4">
+                                <ul class="tw-list-disc tw-list-inside">
+                                    <li>HTTPS (TCP/443)</li>
+                                    <li>SSH (TCP/22)</li>
+                                </ul>
+                            </td>
+                            <td class="tw-px-6 tw-py-4">
+                                <ul class="tw-list-disc tw-list-inside">
+                                    <li>ALB SG</li>
+                                    <li>My Personal IP</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="tw-bg-white dark:tw-bg-gray-800 hover:tw-bg-gray-50 dark:hover:tw-bg-gray-600">
+                            <td class="tw-px-6 tw-py-4 tw-font-medium">Database SG</td>
+                            <td class="tw-px-6 tw-py-4">RDS, ElastiCache, OpenSearch</td>
+                            <td class="tw-px-6 tw-py-4">
+                                <ul class="tw-list-disc tw-list-inside">
+                                    <li>PostgreSQL (TCP/5432)</li>
+                                    <li>Redis (TCP/6379)</li>
+                                    <li>OpenSearch (TCP/9200)</li>
+                                </ul>
+                            </td>
+                            <td class="tw-px-6 tw-py-4">EKS Nodes SG</td>
+                        </tr>
+                        <tr class="tw-bg-gray-50 dark:tw-bg-gray-750 hover:tw-bg-gray-100 dark:hover:tw-bg-gray-650"> <td class="tw-px-6 tw-py-4 tw-font-medium">VPC Endpoints SG</td>
+                            <td class="tw-px-6 tw-py-4">VPC Interface Endpoints</td>
+                            <td class="tw-px-6 tw-py-4">HTTPS (TCP/443)</td>
+                            <td class="tw-px-6 tw-py-4">EKS Nodes SG</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400 tw-mt-3 tw-text-center">
+                This table summarizes the main ingress rules. Outbound rules are generally permissive (allow all) within the VPC or restricted as needed.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Frontend Architecture: User Interface and Delivery
+            </h2>
+            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                    <img src="../assets/images/projects/Frontent.png" alt="Frontend Architecture Diagram for E-commerce Platform"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Frontend Architecture highlighting S3, CloudFront, and Route 53. </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    For the frontend, I opted for a modern JavaScript framework (React.js or Vue.js) to build a responsive and dynamic user interface. The static assets generated by the frontend build process (HTML, CSS, JavaScript bundles, and images) are hosted in an <strong>Amazon S3 bucket</strong> configured for static website hosting.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    To ensure fast global delivery and low latency for users worldwide, <strong>Amazon CloudFront</strong> is utilized as the Content Delivery Network (CDN). CloudFront caches the static content at edge locations closer to the users, significantly improving load times.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                    The platform's domain name is managed by <strong>Amazon Route 53</strong>, which handles DNS resolution. Security for the frontend is further enhanced by:
+                </p>
+                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-text-justify">
+                    <li>Utilizing an <strong>SSL/TLS certificate from AWS Certificate Manager (ACM)</strong> provisioned to the CloudFront distribution, ensuring all traffic is served over HTTPS.</li>
+                    <li>Implementing <strong>AWS Web Application Firewall (WAF)</strong> with CloudFront to protect against common web exploits and provide an additional layer of security against malicious traffic. This setup was a significant achievement in ensuring a secure and performant user experience.</li>
+                </ul>
+            </div>
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Backend Architecture: The Engine of the Platform
+            </h2>
+            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-3/5 sm:tw-float-right sm:tw-ml-6 tw-mb-4"> <img src="../assets/images/projects/Backend-layer.png"
+                         alt="Backend Microservices Architecture on EKS"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Backend Microservices Architecture on Amazon EKS. </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    The backend, serving as the core engine of the e-commerce platform, is architected using a robust and scalable microservices pattern. This distributed system runs on an <strong>Amazon Elastic Kubernetes Service (EKS)</strong> cluster, strategically deployed within the private subnets of the VPC to ensure enhanced security and network isolation.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    The Kubernetes worker nodes are managed by an EKS node group, utilizing <code>t3.medium</code> instances for production-grade performance, with the flexibility to use <code>t3.micro</code> instances for testing and cost optimization during development phases. Each microservice is individually containerized using <strong>Docker</strong>, which promotes consistency across different environments and significantly simplifies the deployment lifecycle.
+                </p>
+            </div>
+
+            <div class="tw-my-6">
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-4 tw-text-center">
+                    Key Microservices
+                </h3>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                    The platform's functionality is decomposed into the following key microservices, each responsible for a distinct domain:
+                </p>
+                <div class="tw-grid md:tw-grid-cols-2 tw-gap-6">
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Product Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Manages the product catalog; utilizes Amazon DynamoDB for flexible and scalable NoSQL storage.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Inventory Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Tracks product inventory in real-time; also leverages DynamoDB.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Cart Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Stores temporary shopping cart data; uses Amazon ElastiCache for Redis for high-performance in-memory caching.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Order Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Handles order processing and transactions; persists data in Amazon Aurora PostgreSQL.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">User/Auth Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Manages user accounts and authentication, potentially integrated with Amazon Cognito; stores user data in Aurora PostgreSQL.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Payment Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Integrates with external payment gateways like Stripe to securely process payments.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Notification Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Sends user notifications (e.g., order confirmations, shipping updates) using Amazon SNS and SQS for reliable, asynchronous messaging.</p>
+                    </div>
+                    <div class="tw-p-4 tw-bg-gray-50 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                        <h4 class="tw-font-semibold tw-text-lg tw-text-gray-800 dark:tw-text-gray-100">Search Service</h4>
+                        <p class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Enhances product search and discovery capabilities, built upon Amazon OpenSearch Service.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-6 tw-mb-2 tw-text-justify">
+                To maintain secure and private communication within the AWS ecosystem, <strong>VPC Endpoints</strong> are configured for essential services such as S3, DynamoDB, and Amazon ECR (Elastic Container Registry), which hosts the Docker images for the microservices. This critical setup ensures that traffic between the EKS cluster and these AWS services does not traverse the public internet, adhering to security best practices.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                Logging and monitoring were explored using <strong>Amazon CloudWatch</strong>, providing capabilities for tracking application performance, collecting metrics, and centralizing logs for operational insights and troubleshooting.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Database and Cache Tier: The Data Backbone
+            </h2>
+            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-right sm:tw-ml-6 tw-mb-4"> <img src="../assets/images/projects/DataLayer.png"
+                         alt="Database and Cache Tier Architecture"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Overview of the Data Storage and Caching Layer. </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    A robust and well-structured data persistence layer is critical for any e-commerce platform. For this project, I designed a multi-faceted data tier using various AWS database and caching services, each chosen to best suit the specific needs of different microservices:
+                </p>
+                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-2 tw-mb-2 tw-text-justify">
+                    <li>
+                        <strong>Amazon DynamoDB:</strong> A key-value and document NoSQL database service, DynamoDB was selected for storing the Product Catalog (<code>Product Service</code>) and real-time stock levels (<code>Inventory Service</code>). Its schema flexibility, single-digit millisecond latency, and seamless scalability make it ideal for these use cases, with <code>product_id</code> often serving as the partition key.
+                    </li>
+                    <li>
+                        <strong>Amazon Aurora PostgreSQL:</strong> For transactional data requiring relational integrity, such as user accounts (<code>User/Auth Service</code>), customer orders (<code>Order Service</code>), order items, and payment records, Amazon Aurora (PostgreSQL-compatible edition) was employed. Aurora provides the performance and availability of commercial databases at a fraction of the cost, along with features like automated backups and failover.
+                    </li>
+                    <li>
+                        <strong>Amazon ElastiCache for Redis:</strong> To provide a high-performance, in-memory caching solution for frequently accessed or temporary data, such as shopping carts (<code>Cart Service</code>), Amazon ElastiCache for Redis was integrated. This significantly reduces latency for cart operations and offloads the primary databases.
+                    </li>
+                    <li>
+                        <strong>Amazon OpenSearch Service:</strong> To power advanced product search capabilities, including faceted search and efficient indexing of product data, Amazon OpenSearch Service (successor to Amazon Elasticsearch Service) was chosen for the <code>Search Service</code>.
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Analytics Layer: A Bonus Exploration
+            </h2>
+            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4"> <img src="../assets/images/projects/Analytics layer.png"
+                         alt="Analytics Layer Architecture for E-commerce Platform"
+                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: Overview of the Optional Analytics Pipeline. </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    To further enhance the platform's capabilities and demonstrate a more comprehensive data strategy, I incorporated an optional analytics pipeline. This layer focuses on extracting insights from the e-commerce data, enabling business intelligence and potentially driving data-informed decisions.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                    The key components of this analytics exploration include:
+                </p>
+                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-2 tw-mb-2 tw-text-justify">
+                    <li>
+                        <strong>S3 Data Lake:</strong> Raw operational and interaction data from various sources can be collected and stored in an Amazon S3-based data lake, providing a durable and scalable repository for analytics.
+                    </li>
+                    <li>
+                        <strong>AWS Glue:</strong> This fully managed extract, transform, and load (ETL) service is used to prepare and process the data stored in the S3 data lake. Glue crawlers can discover data schemas, and ETL jobs can transform the data into a query-friendly format.
+                    </li>
+                    <li>
+                        <strong>Amazon Athena:</strong> An interactive query service that makes it easy to analyze data directly in Amazon S3 using standard SQL. Athena allows for ad-hoc querying of the processed data without needing to manage complex data warehousing infrastructure.
+                    </li>
+                    <li>
+                        <strong>Amazon QuickSight:</strong> A scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service built for the cloud. QuickSight can be used to create and publish interactive dashboards from the data analyzed by Athena, providing visual insights into sales trends, customer behavior, and operational metrics.
+                    </li>
+                    <li>
+                        <strong>Amazon SageMaker:</strong> For more advanced analytics, such as building machine learning models for product recommendations or customer segmentation, Amazon SageMaker offers a comprehensive platform to build, train, and deploy ML models at scale.
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                CI/CD and Deployment: Automation Triumph
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                A cornerstone of modern software development and a key achievement in this project was establishing a robust Continuous Integration and Continuous Deployment (CI/CD) pipeline. This pipeline streamlined the development workflow, ensuring that code changes are automatically built, tested, and deployed to the AWS environment, significantly improving efficiency and reliability.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                The CI/CD process was orchestrated using the following components:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-2 tw-mb-4 tw-text-justify">
+                <li>
+                    <strong>GitHub:</strong> Served as the central code repository. All codebase for the frontend, backend microservices, and infrastructure configurations were version-controlled here. Commits pushed to specific branches (e.g., main or develop) automatically triggered the CI/CD pipeline.
+                </li>
+                <li>
+                    <strong>AWS Elastic Container Registry (ECR):</strong> Used as a fully-managed Docker container registry to store, manage, and deploy the Docker images for each of the e-commerce platform's microservices. The pipeline would build new Docker images upon code changes and push them to ECR.
+                </li>
+                <li>
+                    <strong>GitHub Actions (Implied):</strong> While not explicitly named in the "CI/CD and Deployment" section of the blog, GitHub Actions is mentioned as the CI/CD tool in the "Core Technologies Utilized" section of `ecommerce.html` and is a common choice for automating workflows from GitHub. It would be responsible for running build scripts, containerizing applications, pushing to ECR, and initiating deployments to Amazon EKS.
+                </li>
+                <li>
+                    <strong>AWS Secrets Manager:</strong> To securely manage sensitive information such as API keys, database credentials, and other secrets required by the applications, AWS Secrets Manager was integrated. This avoids hardcoding sensitive data and allows for controlled access and rotation of secrets.
+                </li>
+                <li>
+                    <strong>Custom IAM Roles and Policies:</strong> Granular AWS Identity and Access Management (IAM) policies and roles (such as <code>EKSClusterRole</code> and <code>EKSNodeRole</code>) were defined to ensure that each component of the platform (EKS, RDS, ECR, etc.) had only the necessary permissions required to function (Principle of Least Privilege).
+                </li>
+            </ul>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                This automated pipeline significantly reduced manual intervention, minimized the risk of human error during deployments, and enabled faster iteration cycles, which was a personal triumph in applying DevOps best practices to a complex cloud application.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Global Infrastructure: Thinking Big
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                While the primary deployment region for this project was <strong>us-east-2 (Ohio)</strong>, a forward-thinking approach to resilience and availability was considered in the architecture. The design accommodates a multi-region strategy, with <strong>us-east-1 (N. Virginia)</strong> planned as a secondary region for disaster recovery purposes.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                This involves ensuring that data can be replicated across regions and that services can be failed over if the primary region experiences an outage. Leveraging AWS's global infrastructure, the platform is designed to maintain high availability across different Availability Zones (AZs) within the primary region, and can be extended for cross-region disaster recovery, a crucial aspect for enterprise-grade applications. Planning for such scalability and resilience was an enjoyable part of the architectural process.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Project Conclusion and Key Learnings
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This graduation project successfully demonstrated the design and deployment of a professional, scalable e-commerce solution on AWS, balancing cost-efficiency with industry-standard practices. From the S3/CloudFront-hosted frontend and the microservices architecture on Amazon EKS, to the well-organized database and cache tiers, each layer was a significant learning step in cloud engineering and application development.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                The journey reinforced the importance of robust CI/CD pipelines, meticulous security configurations, and the power of AWS services in building resilient and scalable applications. The hands-on experience with Kubernetes orchestration, microservice decomposition, and various data storage solutions has been invaluable.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                I hope this overview of the e-commerce platform architecture and my development process provides useful insights. This project not only served as a comprehensive academic endeavor but also as a practical application of skills relevant to modern cloud and DevOps roles.
+            </p>
+            <blockquote class="tw-mt-8 tw-mb-6 tw-p-4 tw-italic tw-border-l-4 tw-border-blue-500 dark:tw-border-blue-400 tw-bg-gray-100 dark:tw-bg-gray-800 tw-text-gray-700 dark:tw-text-gray-300 tw-rounded-r-md">
+                <p class="tw-mb-0">"The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life."</p>
+                <footer class="tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-1">- Bill Gates</footer>
+            </blockquote>
+
         </div>
     </main>
 
