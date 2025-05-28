@@ -58,15 +58,163 @@
     <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto"> 
         <!-- Project Header Section -->
         <div class="tw-mb-12 tw-text-center">
-            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">NLP Movie Recommender System</h1>
-            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">Leveraging Natural Language Processing with NLTK and Word2Vec for Personalized Movie Suggestions.</p>
+            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Unveiling the Magic Behind Movie Recommendations</h1>
+            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">A deep dive into a content-based filtering system that suggests your next favorite movie using NLP techniques.</p>
         </div>
 
         <!-- Main Content Card -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
-            <div class="tw-prose dark:tw-prose-invert tw-max-w-none">
-                <p class="tw-text-center tw-text-gray-900 dark:tw-text-gray-100">Main content starts here, below the fixed header.</p>
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-2 tw-mb-6 tw-text-center">
+                Introduction: Finding Your Next Favorite Movie
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This project delves into the creation of a movie recommender system designed to suggest films users might enjoy based on movies they already love. It’s a classic example of a <strong>content-based filtering system</strong>, which focuses on the intrinsic features of the movies themselves—such as plot, cast, crew, and genre—rather than relying on collaborative user rating patterns.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The main aim was to build a system that, given a specific movie title, could intelligently recommend a list of other movies that are most similar in terms of their content and characteristics.
+            </p>
+             <figure class="tw-my-8">
+                <img src="../assets/images/Projects/Recommender System.svg" alt="Movie Recommender System Conceptual Overview"
+                     class="tw-w-full tw-max-w-lg tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                <figcaption class="tw-text-center tw-text-xs tw-text-gray-500 dark:tw-text-gray-400 tw-mt-1">
+                    Conceptual flow of the content-based movie recommender.
+                </figcaption>
+            </figure>
+
+            <div class="tw-my-8 tw-p-6 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
+                <h3 class="tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-4 tw-text-center">Key Information</h3>
+                <div class="tw-grid md:tw-grid-cols-2 tw-gap-x-8 tw-gap-y-4">
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Project Type:</strong> NLP, Machine Learning, Recommender System
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Core Focus:</strong> Content-Based Filtering, Text Preprocessing, Vectorization, Similarity Metrics
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Primary Dataset:</strong> TMDB 5000 Movie Dataset
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Development Environment:</strong> Jupyter Notebook
+                    </div>
+                    <!-- <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Role:</strong> (Please specify your role, e.g., Developer, Researcher)
+                    </div>
+                    <div>
+                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Duration:</strong> (Please specify, e.g., Personal Project - Timeline)
+                    </div> -->
+                </div>
             </div>
+
+            <div class="tw-text-center tw-my-8 md:tw-my-12">
+                <h3 class="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-6">
+                    Core Technologies Utilized
+                </h3>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-x-6 tw-gap-y-4 md:tw-gap-x-8">
+                    <img src="../assets/images/brand-logos/python-original-wordmark.svg" alt="Python" title="Python" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/pandas-original-wordmark.svg" alt="Pandas" title="Pandas (Data Manipulation)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/numpy-original-wordmark.svg" alt="NumPy" title="NumPy (Numerical Operations)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/scikitlearn-original.svg" alt="Scikit-learn" title="Scikit-learn (CountVectorizer, Cosine Similarity)" class="tw-h-10 md:tw-h-12">
+                    <img src="../assets/images/brand-logos/NLTK.png" alt="NLTK" title="NLTK (Text Preprocessing, Stemming)" class="tw-h-10 md:tw-h-12"> <img src="../assets/images/brand-logos/jupyter-original-wordmark.svg" alt="Jupyter Notebook" title="Jupyter Notebook (Development Environment)" class="tw-h-10 md:tw-h-12">
+                    </div>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                The Data: What Fuels the Recommendations?
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The project primarily utilized two datasets from TMDB (The Movie Database) to build the recommendation engine:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-2 tw-mb-4">
+                <li>
+                    <strong><code>tmdb_5000_movies.csv</code>:</strong> This dataset formed the backbone, containing rich details for 5000 movies. Information included budget, genres, homepage URL, ID, keywords, original language, original title, overview (plot summary), popularity score, production companies, production countries, release date, revenue, runtime, spoken languages, status, tagline, title, vote average, and vote count.
+                </li>
+                <li>
+                    <strong><code>tmdb_5000_credits.csv</code>:</strong> This dataset complemented the first by providing detailed cast and crew information for each movie, critically including the movie ID and title for merging purposes.
+                </li>
+            </ul>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                While another dataset (<code>imdb_movies.csv</code>) was noted as present in the project files, the core logic detailed in the primary Jupyter Notebook (<code>Movie-recommender-system.ipynb</code>) focused on leveraging these two TMDB datasets for generating recommendations.
+            </p>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Methodology & Implementation: The "How-To"
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The core logic for the movie recommender system was developed within a Jupyter Notebook (<code>Movie-recommender-system.ipynb</code>). The process involved several key steps, from data preparation to generating the final recommendations:
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                1. Loading and Merging Data
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The two TMDB CSV files (<code>tmdb_5000_movies.csv</code> and <code>tmdb_5000_credits.csv</code>) were initially loaded into pandas DataFrames. These DataFrames were then merged based on the movie title to create a unified dataset, providing a comprehensive view of each movie's attributes and associated personnel.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                2. Feature Selection & Engineering - Crafting the Movie's "Essence"
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                From the merged dataset, key features were selected for analysis: <code>movie_id</code>, <code>title</code>, <code>overview</code>, <code>genres</code>, <code>keywords</code>, <code>cast</code>, and <code>crew</code>. Significant feature engineering was performed to extract and process these attributes:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-mb-2 tw-text-justify">
+                <li>Helper functions were created to parse JSON-like string structures present in columns like genres, keywords, cast, and crew. Python's <code>ast</code> module was used for safe evaluation of these strings into Python objects.</li>
+                <li>For 'cast,' the names of the first three actors were extracted to represent the primary cast members.</li>
+                <li>For 'crew,' the director's name was specifically sought out and extracted.</li>
+                <li>To ensure that multi-word names (e.g., "Sam Worthington") or phrases were treated as single, distinct entities during similarity calculation, spaces were removed from these extracted items (transforming them to, e.g., "SamWorthington").</li>
+                <li>The cornerstone of the feature engineering was the creation of a consolidated 'tags' column. This column combined the movie's overview (split into individual words), all extracted genres, keywords, the top 3 cast members, and the director into a single descriptive string for each movie. This 'tags' string effectively became the unique content "DNA" or fingerprint of the movie.</li>
+            </ul>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                3. Text Preprocessing - Cleaning the "Tags"
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                To prepare the 'tags' for numerical analysis, several preprocessing steps were applied:
+            </p>
+            <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-mb-2 tw-text-justify">
+                <li>All text in the 'tags' column was converted to lowercase to ensure consistency (e.g., "Action" and "action" treated as the same).</li>
+                <li>Stemming was performed using the PorterStemmer from the NLTK (Natural Language Toolkit) library. This process reduces words to their root or stem form (e.g., "loving," "loved," "lover" all become "love"), helping to group semantically similar words and reduce the dimensionality of the feature space.</li>
+            </ul>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                4. Vectorization - Turning Words into Numbers
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                To enable mathematical comparison between movies based on their 'tags,' the textual data needed to be converted into numerical vectors. This was achieved using the <code>CountVectorizer</code> from the scikit-learn library. It was configured to consider the top 5000 most frequent words (features) across all movie tags and to ignore common English stop words (like "the," "a," "is") that don't add much semantic value for differentiation. This vectorization process created a sparse matrix where each row represented a movie and each column represented a unique word from the top 5000, with the cell values indicating the frequency of that word in the respective movie's 'tags'.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                5. Calculating Similarity - The Heart of the Recommender
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                With each movie represented as a numerical vector, the next critical step was to measure how similar these vectors (and thus, the movies) were to each other. <strong>Cosine Similarity</strong> was the metric chosen for this task. This function, also from scikit-learn's <code>metrics.pairwise</code> module, calculates the cosine of the angle between two vectors. A cosine value closer to 1 indicates a smaller angle and therefore higher similarity, while a value closer to 0 indicates lower similarity (orthogonality). This calculation was performed for all pairs of movies, resulting in a comprehensive similarity matrix where each cell (i, j) stores the cosine similarity between movie i and movie j.
+            </p>
+
+            <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-6 tw-mb-3">
+                6. Making Recommendations
+            </h3>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
+                A Python function, named <code>recommend</code>, was defined to generate movie suggestions. The process is as follows:
+            </p>
+            <ol class="tw-list-decimal tw-list-inside tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-mb-4 tw-text-justify">
+                <li>When a user inputs a movie title into this function, it first finds the index of that movie within the dataset.</li>
+                <li>It then retrieves the row corresponding to this movie from the pre-calculated cosine similarity matrix. This row contains the similarity scores of the input movie with all other movies in the dataset.</li>
+                <li>These similarity scores are sorted in descending order to rank movies from most to least similar.</li>
+                <li>Finally, the function outputs the titles of the top 5 movies that are most similar to the input movie, excluding the input movie itself from the list of recommendations.</li>
+            </ol>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                In Conclusion
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This movie recommender system provides a solid example of content-based filtering in action. By cleverly engineering a 'tags' feature to encapsulate the essence of each movie and then employing cosine similarity to measure their relatedness, the system effectively identifies and suggests movies with similar characteristics. It serves as a great showcase of data preprocessing, feature engineering, and core machine learning techniques for building a practical and intuitive recommendation engine.
+            </p>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-6 tw-text-justify">
+                As noted in the project materials, the <code>app.py</code> file (likely intended for a Flask web application) was empty in the version analyzed, indicating that this particular iteration focused on demonstrating the core recommendation logic within the Jupyter Notebook environment.
+            </p>
+            <blockquote class="tw-mt-8 tw-mb-6 tw-p-4 tw-italic tw-border-l-4 tw-border-blue-500 dark:tw-border-blue-400 tw-bg-gray-100 dark:tw-bg-gray-800 tw-text-gray-700 dark:tw-text-gray-300 tw-rounded-r-md">
+                <p class="tw-mb-0">"The goal is to turn data into information, and information into insight."</p>
+                <footer class="tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-1">- Carly Fiorina</footer>
+            </blockquote>
         </div>
     </main>
 
