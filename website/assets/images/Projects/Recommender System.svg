@@ -1,0 +1,183 @@
+<svg width="712" height="655" viewBox="0 0 540 491.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(75.22244361898453,441.0506846543321) scale(0.5498288364169782)">
+<title style="">Movie Recommender Architecture</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-802.16 701.59,-802.16 701.59,4 -4,4" style=""/>
+<!-- A -->
+<g id="node1" class="node">
+<title style="">A</title>
+<polygon fill="lightblue" stroke="lightblue" points="315.82,-798.16 151.63,-798.16 151.63,-762.16 315.82,-762.16 315.82,-798.16" style=""/>
+<text text-anchor="middle" x="233.72" y="-775.96" font-family="Times,serif" font-size="14.00" style="">TMDB 5000 Movies CSV</text>
+</g>
+<!-- C -->
+<g id="node3" class="node">
+<title style="">C</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-708.16" rx="109.46" ry="18" style=""/>
+<text text-anchor="middle" x="323.72" y="-703.96" font-family="Times,serif" font-size="14.00" style="">Data Loading &amp; Merging</text>
+</g>
+<!-- A&#45;&gt;C -->
+<g id="edge1" class="edge">
+<title style="">A-&gt;C</title>
+<path fill="none" stroke="black" d="M255.97,-761.85C267.09,-753.21 280.72,-742.6 292.83,-733.18" style=""/>
+<polygon fill="black" stroke="black" points="294.79,-736.09 300.54,-727.19 290.5,-730.57 294.79,-736.09" style=""/>
+</g>
+<!-- B -->
+<g id="node2" class="node">
+<title style="">B</title>
+<polygon fill="lightblue" stroke="lightblue" points="496.04,-798.16 333.41,-798.16 333.41,-762.16 496.04,-762.16 496.04,-798.16" style=""/>
+<text text-anchor="middle" x="414.72" y="-775.96" font-family="Times,serif" font-size="14.00" style="">TMDB 5000 Credits CSV</text>
+</g>
+<!-- B&#45;&gt;C -->
+<g id="edge2" class="edge">
+<title style="">B-&gt;C</title>
+<path fill="none" stroke="black" d="M392.23,-761.85C380.99,-753.21 367.21,-742.6 354.96,-733.18" style=""/>
+<polygon fill="black" stroke="black" points="357.22,-730.51 347.16,-727.18 352.95,-736.05 357.22,-730.51" style=""/>
+</g>
+<!-- D -->
+<g id="node4" class="node">
+<title style="">D</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-624.74" rx="136.4" ry="29.42" style=""/>
+<text text-anchor="middle" x="323.72" y="-628.94" font-family="Times,serif" font-size="14.00" style="">Data Cleaning &amp; Preprocessing</text>
+<text text-anchor="middle" x="323.72" y="-612.14" font-family="Times,serif" font-size="14.00" style="">(Pandas, Custom Functions)</text>
+</g>
+<!-- C&#45;&gt;D -->
+<g id="edge3" class="edge">
+<title style="">C-&gt;D</title>
+<path fill="none" stroke="black" d="M323.72,-689.89C323.72,-682.83 323.72,-674.34 323.72,-665.89" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-666.03 323.72,-656.03 320.22,-666.03 327.22,-666.03" style=""/>
+</g>
+<!-- E -->
+<g id="node5" class="node">
+<title style="">E</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-529.91" rx="91.85" ry="29.42" style=""/>
+<text text-anchor="middle" x="323.72" y="-534.11" font-family="Times,serif" font-size="14.00" style="">Feature Engineering</text>
+<text text-anchor="middle" x="323.72" y="-517.31" font-family="Times,serif" font-size="14.00" style="">(Create 'Tags')</text>
+</g>
+<!-- D&#45;&gt;E -->
+<g id="edge4" class="edge">
+<title style="">D-&gt;E</title>
+<path fill="none" stroke="black" d="M323.72,-594.88C323.72,-587.37 323.72,-579.14 323.72,-571.16" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-571.27 323.72,-561.27 320.22,-571.27 327.22,-571.27" style=""/>
+</g>
+<!-- F -->
+<g id="node6" class="node">
+<title style="">F</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-435.08" rx="155.37" ry="29.42" style=""/>
+<text text-anchor="middle" x="323.72" y="-439.28" font-family="Times,serif" font-size="14.00" style="">Text Transformation</text>
+<text text-anchor="middle" x="323.72" y="-422.48" font-family="Times,serif" font-size="14.00" style="">(Lowercase, Stemming with NLTK)</text>
+</g>
+<!-- E&#45;&gt;F -->
+<g id="edge5" class="edge">
+<title style="">E-&gt;F</title>
+<path fill="none" stroke="black" d="M323.72,-500.05C323.72,-492.54 323.72,-484.31 323.72,-476.33" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-476.44 323.72,-466.44 320.22,-476.44 327.22,-476.44" style=""/>
+</g>
+<!-- G -->
+<g id="node7" class="node">
+<title style="">G</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-340.25" rx="83.88" ry="29.42" style=""/>
+<text text-anchor="middle" x="323.72" y="-344.45" font-family="Times,serif" font-size="14.00" style="">Vectorization</text>
+<text text-anchor="middle" x="323.72" y="-327.65" font-family="Times,serif" font-size="14.00" style="">(CountVectorizer)</text>
+</g>
+<!-- F&#45;&gt;G -->
+<g id="edge6" class="edge">
+<title style="">F-&gt;G</title>
+<path fill="none" stroke="black" d="M323.72,-405.21C323.72,-397.71 323.72,-389.48 323.72,-381.5" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-381.61 323.72,-371.61 320.22,-381.61 327.22,-381.61" style=""/>
+</g>
+<!-- H -->
+<g id="node8" class="node">
+<title style="">H</title>
+<ellipse fill="lightgrey" stroke="lightgrey" cx="323.72" cy="-245.42" rx="99.02" ry="29.42" style=""/>
+<text text-anchor="middle" x="323.72" y="-249.62" font-family="Times,serif" font-size="14.00" style="">Similarity Calculation</text>
+<text text-anchor="middle" x="323.72" y="-232.82" font-family="Times,serif" font-size="14.00" style="">(Cosine Similarity)</text>
+</g>
+<!-- G&#45;&gt;H -->
+<g id="edge7" class="edge">
+<title style="">G-&gt;H</title>
+<path fill="none" stroke="black" d="M323.72,-310.38C323.72,-302.87 323.72,-294.65 323.72,-286.66" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-286.77 323.72,-276.77 320.22,-286.77 327.22,-286.77" style=""/>
+</g>
+<!-- I -->
+<g id="node9" class="node">
+<title style="">I</title>
+<path fill="orange" stroke="orange" d="M400.55,-176.73C400.55,-178.53 366.12,-180 323.72,-180 281.33,-180 246.9,-178.53 246.9,-176.73 246.9,-176.73 246.9,-147.27 246.9,-147.27 246.9,-145.47 281.33,-144 323.72,-144 366.12,-144 400.55,-145.47 400.55,-147.27 400.55,-147.27 400.55,-176.73 400.55,-176.73" style=""/>
+<path fill="none" stroke="orange" d="M400.55,-176.73C400.55,-174.92 366.12,-173.45 323.72,-173.45 281.33,-173.45 246.9,-174.92 246.9,-176.73" style=""/>
+<text text-anchor="middle" x="323.72" y="-157.8" font-family="Times,serif" font-size="14.00" style="">Movie Similarity Matrix</text>
+</g>
+<!-- H&#45;&gt;I -->
+<g id="edge8" class="edge">
+<title style="">H-&gt;I</title>
+<path fill="none" stroke="black" d="M323.72,-215.94C323.72,-208.02 323.72,-199.43 323.72,-191.51" style=""/>
+<polygon fill="black" stroke="black" points="327.22,-191.7 323.72,-181.7 320.22,-191.7 327.22,-191.7" style=""/>
+</g>
+<!-- K -->
+<g id="node11" class="node">
+<title style="">K</title>
+<polygon fill="yellow" stroke="yellow" points="429.72,-108 265.81,-90 429.72,-72 593.64,-90 429.72,-108" style=""/>
+<text text-anchor="middle" x="429.72" y="-85.8" font-family="Times,serif" font-size="14.00" style="">Recommendation Function</text>
+</g>
+<!-- I&#45;&gt;K -->
+<g id="edge10" class="edge">
+<title style="">I-&gt;K</title>
+<path fill="none" stroke="black" d="M350.2,-143.52C364.59,-134.02 382.49,-122.2 397.66,-112.18" style=""/>
+<polygon fill="black" stroke="black" points="399.49,-115.16 405.91,-106.73 395.63,-109.32 399.49,-115.16" style=""/>
+</g>
+<!-- J -->
+<g id="node10" class="node">
+<title style="">J</title>
+<polygon fill="lightgreen" stroke="lightgreen" points="652.57,-180 466.69,-180 418.87,-144 604.76,-144 652.57,-180" style=""/>
+<text text-anchor="middle" x="535.72" y="-157.8" font-family="Times,serif" font-size="14.00" style="">Input Movie Title</text>
+</g>
+<!-- J&#45;&gt;K -->
+<g id="edge9" class="edge">
+<title style="">J-&gt;K</title>
+<path fill="none" stroke="black" d="M509.25,-143.52C494.86,-134.02 476.96,-122.2 461.79,-112.18" style=""/>
+<polygon fill="black" stroke="black" points="463.81,-109.32 453.54,-106.73 459.96,-115.16 463.81,-109.32" style=""/>
+</g>
+<!-- L -->
+<g id="node12" class="node">
+<title style="">L</title>
+<polygon fill="lightgreen" stroke="lightgreen" points="367.45,-36 75.18,-36 0,0 292.26,0 367.45,-36" style=""/>
+<text text-anchor="middle" x="183.72" y="-13.8" font-family="Times,serif" font-size="14.00" style="">Top 5 Similar Movies Output</text>
+</g>
+<!-- K&#45;&gt;L -->
+<g id="edge11" class="edge">
+<title style="">K-&gt;L</title>
+<path fill="none" stroke="black" d="M385.46,-76.4C349.52,-66.18 298.12,-51.55 256.19,-39.62" style=""/>
+<polygon fill="black" stroke="black" points="257.23,-36.28 246.66,-36.91 255.32,-43.01 257.23,-36.28" style=""/>
+</g>
+<!-- M -->
+<g id="node13" class="node">
+<title style="">M</title>
+<path fill="orange" stroke="orange" d="M473.68,-32.73C473.68,-34.53 453.98,-36 429.72,-36 405.47,-36 385.76,-34.53 385.76,-32.73 385.76,-32.73 385.76,-3.27 385.76,-3.27 385.76,-1.47 405.47,0 429.72,0 453.98,0 473.68,-1.47 473.68,-3.27 473.68,-3.27 473.68,-32.73 473.68,-32.73" style=""/>
+<path fill="none" stroke="orange" d="M473.68,-32.73C473.68,-30.92 453.98,-29.45 429.72,-29.45 405.47,-29.45 385.76,-30.92 385.76,-32.73" style=""/>
+<text text-anchor="middle" x="429.72" y="-13.8" font-family="Times,serif" font-size="14.00" style="">Pickled Data</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge12" class="edge">
+<title style="">K-&gt;M</title>
+<path fill="none" stroke="black" d="M423.88,-72.41C423.08,-65.05 422.81,-56.16 423.07,-47.77" style=""/>
+<polygon fill="black" stroke="black" points="426.55,-48.16 423.7,-37.96 419.57,-47.71 426.55,-48.16" style=""/>
+</g>
+<!-- N -->
+<g id="node14" class="node">
+<title style="">N</title>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="697.59,-36 491.86,-36 491.86,-32 487.86,-32 487.86,-28 491.86,-28 491.86,-8 487.86,-8 487.86,-4 491.86,-4 491.86,0 697.59,0 697.59,-36" style=""/>
+<polyline fill="none" stroke="black" stroke-dasharray="5,2" points="491.86,-32 495.86,-32 495.86,-28 491.86,-28" style=""/>
+<polyline fill="none" stroke="black" stroke-dasharray="5,2" points="491.86,-8 495.86,-8 495.86,-4 491.86,-4" style=""/>
+<text text-anchor="middle" x="594.72" y="-13.8" font-family="Times,serif" font-size="14.00" style="">Streamlit Web App UI (Potential)</text>
+</g>
+<!-- K&#45;&gt;N -->
+<g id="edge14" class="edge">
+<title style="">K-&gt;N</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M462.32,-75.17C485.46,-65.36 516.97,-51.99 543.45,-40.75" style=""/>
+<polygon fill="black" stroke="black" points="544.47,-44.12 552.31,-36.99 541.73,-37.68 544.47,-44.12" style=""/>
+</g>
+<!-- M&#45;&gt;K -->
+<g id="edge13" class="edge">
+<title style="">M-&gt;K</title>
+<path fill="none" stroke="black" d="M435.65,-36.45C436.42,-43.93 436.65,-52.85 436.35,-61.2" style=""/>
+<polygon fill="black" stroke="black" points="432.87,-60.68 435.67,-70.9 439.86,-61.17 432.87,-60.68" style=""/>
+</g>
+</g>
+</svg>
