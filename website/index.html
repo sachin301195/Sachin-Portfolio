@@ -76,7 +76,6 @@
             </div>
             <button
                 class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
-                onclick="toggleHeader()"
                 aria-label="menu"
                 id="collapse-btn"
             ></button>
@@ -446,9 +445,8 @@
                     <span class="tw-font-semibold">Background</span>
                 </h2>
                 
-                <div class="tw-mt-8 tw-w-full tw-flex max-md:tw-flex-col tw-relative">
-                    <!-- Experience (60% width, left side) -->
-                    <div class="tw-w-[58%] max-md:tw-w-full tw-flex tw-flex-col tw-gap-8">
+                <div class="tw-mt-8 tw-w-full tw-flex lg:tw-flex-row tw-flex-col tw-relative">
+                    <div class="tw-w-full lg:tw-w-[55%] lg:tw-pr-4 tw-flex tw-flex-col tw-gap-8">
                         <div class="reveal-up tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-p-6 tw-rounded-lg tw-shadow-md">
                             <h3 class="tw-text-2xl tw-font-semibold">Large Language Model (LLM) Trainer & Evaluator</h3>
                             <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-mt-1">DataAnnotation | Freelance - Remote, Toronto, ON | Nov. 2023 - Present</p>
@@ -480,17 +478,12 @@
                         </div>
                     </div>
 
-                    <!-- Vertical Divider - Absolute positioned -->
-                    <div class="tw-absolute tw-left-[60%] tw-top-0 tw-bottom-0 tw-w-[2px] tw-bg-gray-300 dark:tw-bg-gray-600 max-md:tw-hidden"></div>
+                    <div class="tw-absolute tw-top-0 tw-bottom-0 tw-w-[3px] tw-bg-gray-300 dark:tw-bg-gray-600 tw-hidden lg:tw-block lg:tw-left-[56%]"></div>
 
-                    <!-- Education & Certifications (40% width, right side) -->
-                    <div class="tw-w-[38%] max-md:tw-w-full tw-flex tw-flex-col tw-gap-6 tw-pl-8">
-                        <!-- Mobile Divider -->
-                        <hr class="tw-hidden max-md:tw-block tw-my-8 tw-border-t tw-border-gray-300 dark:tw-border-gray-600">
+                    <div class="tw-w-full lg:tw-w-[38%] lg:tw-pl-4 tw-flex tw-flex-col tw-gap-6">
+                        <hr class="tw-block lg:tw-hidden tw-my-8 tw-border-t tw-border-gray-300 dark:tw-border-gray-600">
                         
-                        <div class="tw-bg-transparent tw-p-6 tw-rounded-lg">
-                            <h3 class="tw-text-2xl tw-font-semibold tw-text-gray-900 dark:tw-text-gray-200">Education</h3>
-                            
+                        <div class="tw-bg-transparent lg:tw-p-6 tw-p-0 tw-rounded-lg"> <h3 class="tw-text-2xl tw-font-semibold tw-text-gray-900 dark:tw-text-gray-200">Education</h3>
                             <div class="tw-mt-6 tw-space-y-8 tw-text-gray-800 dark:tw-text-gray-200">
                                 <div class="tw-space-y-2">
                                     <p class="tw-font-semibold">Post-Graduate Certificate in Cloud Computing Technologies</p>
@@ -498,14 +491,12 @@
                                     <p>Apr. 2025 | GPA: 3.8</p>
                                     <p class="tw-text-gray-600 dark:tw-text-gray-400">Courses: AWS Cloud Practitioner, Azure Admin, AWS Solutions Architect.</p>
                                 </div>
-
                                 <div class="tw-space-y-2">
                                     <p class="tw-font-semibold">MSc. in Information Technology</p>
                                     <p>Technical University of Ostwestfalen-Lippe, NRW, Germany</p>
                                     <p>GPA: 3.83</p>
                                     <p class="tw-text-gray-600 dark:tw-text-gray-400">Courses: Advanced ML, Algorithms, Embedded Systems.</p>
                                 </div>
-
                                 <div class="tw-space-y-2">
                                     <p class="tw-font-semibold">B-Tech in Electrical Engineering</p>
                                     <p>Charotar University, Guj, India</p>
@@ -552,8 +543,7 @@
                         tw-p-4 max-lg:tw-place-content-center tw-gap-8 "
             >   
     
-                <div class="max-xl:tw-flex max-xl:tw-flex-col tw-place-items-center tw-grid tw-grid-cols-3 tw-gap-8 
-                            tw-place-content-center tw-auto-rows-auto">
+                <div class="tw-flex tw-flex-col lg:tw-grid lg:tw-grid-cols-3 tw-gap-8 tw-place-items-center lg:tw-place-content-center lg:tw-auto-rows-auto">
                     <div class="reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full">
                         <a href="projects/cv-cancer.html" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
                             tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
@@ -643,8 +633,7 @@
                                 tw-p-4 max-lg:tw-place-content-center tw-gap-8 "
                     >   
     
-                        <div class="max-xl:tw-flex max-xl:tw-flex-col tw-place-items-center tw-grid tw-grid-cols-3 tw-gap-8 
-                                    tw-place-content-center tw-auto-rows-auto">
+                        <div class="tw-flex tw-flex-col lg:tw-grid lg:tw-grid-cols-3 tw-gap-8 tw-place-items-center lg:tw-place-content-center lg:tw-auto-rows-auto">
                             <div class="reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full">
                                 <a href="projects/movielytics.html" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
                                     tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 

@@ -381,7 +381,7 @@ hr{
 }
 
 /* Fix for background section layout */
-#background [class*="tw-w-[58%]"] {
+/* #background [class*="tw-w-[58%]"] {
     width: 60% !important;
 }
 
@@ -391,7 +391,7 @@ hr{
 
 #background [class*="tw-absolute"][class*="tw-left-[60%]"] {
     left: 62% !important;
-}
+} */
 
 #background .tw-space-y-3 {
     margin-top: 1rem !important;

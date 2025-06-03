@@ -47,35 +47,50 @@ function toggleHeader() {
     }
 }
 
+const headerNavLinks = document.querySelectorAll("#collapsed-header-items nav a.header-links");
+
+if (headerNavLinks.length > 0 && typeof toggleHeader === 'function') {
+    headerNavLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const isMobileView = window.innerWidth < RESPONSIVE_WIDTH;
+            if (isMobileView && !isHeaderCollapsed) {
+                toggleHeader(); // Call your existing function to close the header
+            }
+        });
+    });
+}
+
 function responsive() {
     const currentWidthIsMobile = window.innerWidth < RESPONSIVE_WIDTH;
 
-    if (navToggle) {
+    if (navToggle && navDropdown) {
         if (!currentWidthIsMobile) { // Desktop
-            collapseHeaderItems.style.height = ""; // Reset height for desktop view
+            if (collapseHeaderItems) {
+                collapseHeaderItems.style.height = ""; // Reset height for desktop view
+            }
             navToggle.addEventListener("mouseenter", openNavDropdown);
             navToggle.addEventListener("mouseleave", navMouseLeave);
-            // If header was collapsed on mobile, ensure it's reset for desktop
-            if (isHeaderCollapsed && collapseBtn && collapseHeaderItems) {
-                 // Potentially ensure header is in its default desktop state
-                 // This might involve removing mobile-specific classes if they interfere
-            }
         } else { // Mobile
             navToggle.removeEventListener("mouseenter", openNavDropdown);
             navToggle.removeEventListener("mouseleave", navMouseLeave);
+            if (navDropdown.getAttribute("data-open") === "true") {
+                closeNavDropdown(); // Close this specific dropdown if screen becomes mobile
+            }
         }
     }
-    // Update isHeaderCollapsed based on current width, only if it's actually mobile
-    // This ensures that if the user opens the menu on desktop, resizing to mobile keeps it conceptually "collapsible"
-    isHeaderCollapsed = currentWidthIsMobile;
-    if (currentWidthIsMobile && collapseHeaderItems && collapseHeaderItems.classList.contains("max-lg:!tw-opacity-100")) {
-        // If we resized to mobile and the menu was open, keep its visual state but ensure isHeaderCollapsed is true
-        // This part is tricky, usually CSS handles initial visibility for mobile.
-        // The toggleHeader function primarily manages the *explicit* open/close action.
-    } else if (!currentWidthIsMobile && collapseHeaderItems) {
-        // If resized to desktop, ensure mobile specific styles that hide content are removed if needed
-        // For instance, ensure height is not '0vh' if the JS was manipulating it
-        collapseHeaderItems.style.height = ""; // Allow CSS to take over for desktop
+    // Logic for the main collapsible header (collapseBtn)
+    if (!currentWidthIsMobile) { // Resized to Desktop
+        // If the mobile menu was open (isHeaderCollapsed is false), ensure it's closed.
+        if (collapseHeaderItems && !isHeaderCollapsed) {
+            // Call toggleHeader to properly close it, update state, and manage classes/listeners.
+            toggleHeader(); // This will set isHeaderCollapsed = true and manage visual state.
+        }
+        // Ensure any JS-applied height for mobile is removed for desktop.
+        if (collapseHeaderItems) {
+            collapseHeaderItems.style.height = "";
+        }
+        window.removeEventListener("click", onHeaderClickOutside); // Clean up click-outside listener
+    } else { // On Mobile
     }
 }
 
