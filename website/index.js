@@ -12,8 +12,6 @@ const themeToggleButton = document.getElementById("theme-toggle"); // The button
 
 // Initialize isHeaderCollapsed based on current width
 let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH;
-// --- End query selectors ---
-
 
 function onHeaderClickOutside(e) {
     if (collapseHeaderItems && !collapseHeaderItems.contains(e.target) &&
@@ -324,3 +322,76 @@ if (currentDiscoverMoreSection) {
         // lastScrollTop = scrollTop;
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('#contact form');
+    const feedbackEl = document.getElementById('form-feedback');
+
+    if (contactForm && feedbackEl) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = formButton.innerHTML;
+            
+            // 1. Client-Side Validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                feedbackEl.textContent = 'Please fill out all fields.';
+                feedbackEl.className = 'tw-mt-4 tw-text-center tw-h-6 tw-text-red-500';
+                return;
+            }
+
+            // Reset feedback and set loading state
+            feedbackEl.textContent = '';
+            formButton.disabled = true;
+            formButton.innerHTML = '<span>Sending...</span>';
+            
+            // !! IMPORTANT: PASTE YOUR INVOKE URL HERE !!
+            const apiEndpoint = 'https://2j12medop5.execute-api.ca-central-1.amazonaws.com/Prod/contact';
+
+            // 2. Using async/await for cleaner code
+            try {
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message }),
+                });
+
+                if (!response.ok) {
+                    // Handle HTTP errors (e.g., 400, 500) from the API
+                    throw new Error(`Server error! Status: ${response.status}`);
+                }
+                
+                // 3. Better User Feedback
+                feedbackEl.textContent = "Message sent successfully! Thank you.";
+                feedbackEl.className = 'tw-mt-4 tw-text-center tw-h-6 tw-text-green-500';
+                contactForm.reset();
+
+            } catch (error) {
+                console.error('Submission error:', error);
+                feedbackEl.textContent = "An error occurred. Please try again later.";
+                feedbackEl.className = 'tw-mt-4 tw-text-center tw-h-6 tw-text-red-500';
+
+            } finally {
+                // Reset button after a delay
+                setTimeout(() => {
+                    formButton.disabled = false;
+                    formButton.innerHTML = originalButtonText;
+                }, 5000);
+            }
+        });
+    }
+
+    // Scroll-down arrow fade effect (remains the same)
+    const discoverMoreSection = document.querySelector('.discover-more-section');
+    if (discoverMoreSection) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            discoverMoreSection.style.opacity = (scrollTop > 100) ? '0' : (1 - (scrollTop / 100)).toString();
+        });
+    }
+});
