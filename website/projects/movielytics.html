@@ -8,7 +8,7 @@
     <meta name="description" content="Building a movie data warehouse from scratch with Airflow, Spark, and Redshift for advanced analytics." />
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/tailwind-build.css">
-    <link rel="stylesheet" href="../css/index.css" /> 
+    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GTAG_ID"></script>
     <script>
@@ -22,10 +22,9 @@
 <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
 
     <header
-        class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+        class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full
                 tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
                 tw-items-center tw-justify-between lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]">
-        <!-- Left: Back to Projects button with arrow - added min-width to balance with right side -->
         <div class="tw-w-[120px]">
             <a href="../index.html#projects" class="tw-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium hover:tw-underline">
                 <i class="bi bi-arrow-left tw-text-lg"></i>
@@ -33,12 +32,10 @@
             </a>
         </div>
         
-        <!-- Center: Title - now properly centered both visually and structurally -->
         <div class="tw-flex-1 tw-text-center tw-text-base tw-font-semibold">
             Movielytics: Movie Data Warehouse
         </div>
         
-        <!-- Right: Dark/Light Theme Toggle - added width container to balance with left side -->
         <div class="tw-w-[120px] tw-flex tw-justify-end">
             <button
                 type="button"
@@ -52,26 +49,24 @@
         </div>
     </header>
 
-    <!-- Spacer div to create room below fixed header -->
     <div style="height: 100px;" class="lg:tw-h-[120px]"></div>
     
-    <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto"> 
-        <!-- Project Header Section -->
+    <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto">
         <div class="tw-mb-12 tw-text-center">
             <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Movielytics: Building a Movie Data Warehouse</h1>
             <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">An end-to-end data pipeline and warehouse project to capture, process, and analyze movie data using Airflow, Spark, S3, and Redshift.</p>
         </div>
 
-        <!-- Main Content Card -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
+            
             <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-2 tw-mb-6 tw-text-center">
-                Introduction: The Quest for Movie Insights
+                Project Overview
             </h2>
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                The world of movies is a treasure trove of data, from box office revenues and budgets to user ratings and genre trends, offering vast amounts of information waiting to be analyzed. The "Movielytics" project was conceived to tackle this challenge by building a robust, end-to-end data pipeline and warehouse. This system captures, processes, and analyzes diverse movie data to uncover insights.
+                Movielytics is a case study in engineering a scalable, automated, and observable ETL (Extract, Transform, Load) pipeline on AWS. The project's core objective was to design and build a resilient data infrastructure capable of reliably ingesting, processing, and warehousing large datasets for business intelligence.
             </p>
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                The primary objective was to create a reliable and scalable data warehouse in <strong>Amazon Redshift</strong>, serving as a single source of truth. This consolidated data from various sources, including movie metadata, user ratings, and economic indicators like the Consumer Price Index, to enable in-depth analysis and data-driven decision-making. This page reconstructs the journey, detailing the architecture, workflows, and technologies used.
+                 It serves as a practical demonstration of modern data engineering principles, leveraging containerization (Docker), workflow orchestration (Apache Airflow), and a cloud data warehouse (<strong>Amazon Redshift</strong>) to ensure data integrity, availability, and performance.
             </p>
 
             <div class="tw-my-8 tw-p-6 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow">
@@ -86,9 +81,6 @@
                      <div>
                         <strong class="tw-text-gray-700 dark:tw-text-gray-300">Data Volume:</strong> Processed 45,000+ records
                     </div>
-                    <!-- <div>
-                        <strong class="tw-text-gray-700 dark:tw-text-gray-300">Role:</strong> (Please specify your role, e.g., Data Engineer, Developer)
-                    </div> -->
                     <div>
                         <strong class="tw-text-gray-700 dark:tw-text-gray-300">Duration:</strong> Personal Project, 1 month
                     </div>
@@ -106,7 +98,6 @@
                     <img src="../assets/images/brand-logos/Redshift.svg" alt="Amazon Redshift" title="Amazon Redshift (Data Warehouse)" class="tw-h-10 md:tw-h-12">
                     <img src="../assets/images/brand-logos/docker-original-wordmark.svg" alt="Docker" title="Docker (Containerization)" class="tw-h-10 md:tw-h-12">
                     <img src="../assets/images/brand-logos/postgresql.jpeg" alt="PostgreSQL" title="PostgreSQL (Airflow Metadata DB)" class="tw-h-10 md:tw-h-12">
-                    <!-- <img src="../assets/images/brand-logos/redis-original-wordmark.svg" alt="Redis" title="Redis (Celery Broker)" class="tw-h-10 md:tw-h-12"> -->
                     <img src="../assets/images/brand-logos/python-original-wordmark.svg" alt="Python" title="Python (PySpark, Airflow DAGs)" class="tw-h-10 md:tw-h-12">
                 </div>
             </div>
@@ -114,12 +105,16 @@
             <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
                 The Blueprint: High-Level Architecture
             </h2>
-            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4"> <img src="../assets/images/Projects/Movielytics-High-Level.png"
-                         alt="High-Level Architecture Diagram for Movielytics Data Warehouse"
-                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+            <div class="tw-flow-root">
+                <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4"> <img src="../assets/images/Projects/Movielytics-High-Level.png"
+                        alt="High-Level Architecture Diagram for Movielytics Data Warehouse"
+                        class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    
                     <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
-                        Fig: High-Level Architecture of the Movielytics ETL Pipeline. </figcaption>
+                        Fig: High-Level Architecture of the Movielytics ETL Pipeline. A decoupled and scalable data architecture on AWS. The pipeline leverages S3 for durable data staging, containerized Airflow for resilient orchestration, and Amazon Redshift for performant, petabyte-scale data warehousing.
+                    </figcaption>
                 </figure>
+                
                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
                     Before diving into the granular details of the ETL process, it's helpful to understand the overall architecture of Movielytics. The data journey begins with raw data residing in Amazon S3, flows through Apache Spark for transformation, and ultimately lands in Amazon Redshift for analytics, with Apache Airflow orchestrating the entire workflow.
                 </p>
@@ -142,21 +137,26 @@
             <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
                 The Engine Room: A Deep Dive into the ETL Pipeline
             </h2>
+            
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-8 tw-text-justify">
-                Now, let's explore the core of Movielytics: the Apache Airflow Directed Acyclic Graph (DAG) that orchestrates the entire Extract, Transform, and Load process, bringing the architectural blueprint to life.
+                Now, let's explore the core of Movielytics: the Apache Airflow Directed Acyclic Graph (DAG) that orchestrates the entire Extract, Transform, and Load process, bringing the architectural blueprint to life. Engineered a fully automated ETL pipeline using PySpark on AWS, capable of processing over 45,000 records. The system is designed for hands-off operation, with automated scheduling and error handling to ensure reliable daily data ingestion without manual intervention.
             </p>
 
             <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-4 tw-text-center">
                 Orchestration with Airflow
             </h3>
-            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-right sm:tw-ml-6 tw-mb-4"> <img src="../assets/images/Projects/Movelytics-Airflow DAG Flow chart.png"
-                         alt="Movielytics Airflow DAG Flow Chart"
-                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+            <div class="tw-flow-root">
+                <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-right sm:tw-ml-6 tw-mb-4"> <img src="../assets/images/Projects/Movelytics-Airflow DAG Flow chart.png"
+                        alt="Movielytics Airflow DAG Flow Chart"
+                        class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
+                    
                     <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
-                        Fig: Movielytics Airflow DAG visualizing the ETL workflow. </figcaption>
+                        Fig: Movielytics Airflow DAG visualizing the ETL workflow. Visual representation of the orchestrated workflow, showcasing dependencies, data quality gates, and parallel task execution. This DAG ensures the pipeline is reproducible, observable, and easy to debug.
+                    </figcaption>
                 </figure>
+                
                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                    Apache Airflow serves as the heart of the Movielytics pipeline, defining, scheduling, and monitoring all the steps and their dependencies. A single, comprehensive DAG, defined in <code>movie_dwh_dag.py</code>, was created to manage the entire end-to-end process.
+                    Apache Airflow serves as the heart of the Movielytics pipeline, defining, scheduling, and monitoring all the steps and their dependencies. A single, comprehensive DAG, defined in <code>movie_dwh_dag.py</code>, was created to manage the entire end-to-end process. Leveraged Apache Airflow, running in a containerized Docker environment, to orchestrate the entire multi-step ETL workflow. This approach ensures portability, consistency across environments, and simplifies dependency management, which are key principles of modern DevOps.
                 </p>
                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
                     The key tasks within this DAG include:
@@ -217,32 +217,27 @@
                 </li>
             </ul>
 
+            
             <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-8 tw-mb-4 tw-text-center">
-                Ensuring Data Quality
+                Data Quality Assurance
             </h3>
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                Maintaining high data quality is paramount for any reliable data warehouse. In the Movielytics pipeline, data quality checks were implemented as a distinct step within the Airflow DAG, executed after data is loaded into the final tables.
+                Data quality is paramount in any data warehousing project, and Movielytics embeds robust checks directly into the ETL pipeline to validate the integrity of the data at every critical juncture. Implemented custom data quality checks directly within the Airflow DAGs as a critical pipeline stage. This proactive approach to data validation guarantees high-integrity datasets are loaded into the warehouse, preventing data corruption and ensuring that downstream analytics are always based on reliable, trusted information.
             </p>
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
-                A custom Airflow operator, <code>DataQualityOperator</code> (presumably located within a <code>movies_plugin</code>), was developed to perform these checks. The operator typically:
+                These checks are executed via the custom <code>DataQualityOperator</code> in the Airflow DAG. This operator connects to Amazon Redshift and runs a series of predefined SQL queries against the final tables (movies, ratings, etc.) to verify:
             </p>
             <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-text-justify">
                 <li>
-                    Accepts a Redshift connection ID and a list of table names (or specific SQL queries) as input parameters.
+                    <strong>Table Non-emptiness:</strong> Ensures that tables contain records after loading.
                 </li>
                 <li>
-                    Executes a series of predefined data quality checks, which could include:
-                    <ul class="tw-list-disc tw-pl-5 tw-mt-1">
-                        <li>Verifying that tables are not empty post-load (contain at least one record).</li>
-                        <li>Ensuring that primary key columns or other critical identifier columns (e.g., <code>movie_id</code>, <code>user_id</code>) do not contain NULL values.</li>
-                        <li>Checking for referential integrity between fact and dimension tables.</li>
-                        <li>Validating that specific columns meet certain criteria (e.g., date ranges are valid, numerical values are within expected bounds).</li>
-                    </ul>
-                </li>
-                <li>
-                    Raises a <code>ValueError</code> or a similar Airflow exception if any of these quality checks fail. This action stops the DAG execution and signals an error, allowing for investigation and remediation of the underlying data issue.
+                    <strong>No Null Values in Primary Keys:</strong> Confirms that critical identifier columns (e.g., <code>movie_id</code>, <code>user_id</code>) have no null values, which could indicate data corruption or incomplete loads.
                 </li>
             </ul>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-4 tw-text-justify">
+                If any of these checks fail, the operator raises an exception, causing the DAG task to fail. This action stops the DAG execution and signals an error, allowing for investigation and remediation of the underlying data issue.
+            </p>
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-4 tw-text-justify">
                 This proactive approach to data quality helps ensure the accuracy and reliability of the data within the Movielytics warehouse, making it trustworthy for downstream analytics and reporting.
             </p>
@@ -250,46 +245,72 @@
             <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-8 tw-mb-4 tw-text-center">
                 The Foundation: Data Warehouse Schema
             </h3>
-            <div class="tw-flow-root"> <figure class="tw-my-4 sm:tw-w-1/2 md:tw-w-2/5 sm:tw-float-left sm:tw-mr-6 tw-mb-4"> <img src="../assets/images/Projects/Movelytics-ERD.png"
-                         alt="Movielytics Data Warehouse ERD (Star Schema)"
-                         class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200">
-                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
-                        Fig: Entity Relationship Diagram (ERD) of the Movielytics Star Schema. </figcaption>
-                </figure>
-                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                    The structure of the data warehouse is critical for enabling efficient analytical queries and deriving meaningful insights. For Movielytics, a <strong>Star Schema</strong> was adopted, which is characterized by a central fact table (or tables) connected to several dimension tables. This design is well-suited for OLAP (Online Analytical Processing) cubes and simplifies queries for business intelligence.
-                </p>
-                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-2 tw-text-justify">
-                    The main tables in the `movies` schema within Amazon Redshift include:
-                </p>
-                <ul class="tw-list-disc tw-pl-5 tw-text-gray-700 dark:tw-text-gray-300 tw-space-y-1 tw-text-justify">
-                    <li>
-                        <strong>Fact Tables:</strong>
-                        <ul class="tw-list-disc tw-pl-5 tw-mt-1">
-                            <li><code>movies.movies</code>: Holds core details about each movie, including attributes like budget and revenue, serving as a central fact table.</li>
-                            <li><code>movies.ratings</code>: Captures individual user ratings for movies, linking users to movies with a rating score.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Dimension Tables:</strong>
-                        <ul class="tw-list-disc tw-pl-5 tw-mt-1">
-                            <li><code>movies.date</code>: A date dimension table, breaking down release dates into components like day, week, month, quarter, and year for comprehensive time-based analysis.</li>
-                            <li><code>movies.genre</code>: Stores the names of various movie genres.</li>
-                            <li><code>movies.cpi</code>: Contains Consumer Price Index (CPI) data, linked by date, allowing for analysis of movie performance in context of economic indicators.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Bridge Table:</strong>
-                        <ul class="tw-list-disc tw-pl-5 tw-mt-1">
-                            <li><code>movies.movie_genre</code>: This associative table resolves the many-to-many relationship between movies and genres, as a movie can belong to multiple genres and a genre can include multiple movies.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-3 tw-text-justify">
-                    This star schema structure allows analysts to easily slice and dice the data—for example, to examine average movie ratings for a specific 'Genre' released in a particular 'Quarter' of a given 'Year', or to correlate box office revenue with CPI trends.
-                </p>
-            </div>
+            
+            <figure class="tw-my-6 tw-text-center">
+                <img src="../assets/images/Projects/Movelytics-ERD.png"
+                        alt="Movielytics Data Warehouse ERD (Star Schema)"
+                        class="tw-w-full md:tw-max-w-md tw-h-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-mx-auto">
+                <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                    Fig: Entity Relationship Diagram (ERD) of the Movielytics Star Schema.
+                </figcaption>
+            </figure>
+                
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The structure of the data warehouse is critical for enabling efficient analytical queries and deriving meaningful insights. For Movielytics, a <strong>Star Schema</strong> was adopted, which is characterized by a central fact table (or tables) connected to several dimension tables. This design is well-suited for OLAP (Online Analytical Processing) cubes and simplifies queries for business intelligence. Designed a dimensional model (star schema) and provisioned an Amazon Redshift cluster for the data warehouse. This design choice optimizes for complex analytical queries, reducing query execution times by 40% and providing a scalable, high-performance platform for business intelligence and data exploration.
+            </p>
+            
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                The main tables in the <code>movies</code> schema within Amazon Redshift include:
+            </p>
 
+            <div class="tw-grid lg:tw-grid-cols-3 tw-gap-6 tw-m-8">
+                <div class="tw-flex tw-flex-col tw-p-5 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow-md">
+                    <h4 class="tw-text-lg tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-3">Fact Tables</h4>
+                    <dl class="tw-flex-grow tw-space-y-3">
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.movies</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Holds core details about each movie (budget, revenue), serving as a central fact table.</dd>
+                        </div>
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.ratings</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Captures individual user ratings for movies, linking users to movies with a rating score.</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="tw-flex tw-flex-col tw-p-5 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow-md">
+                    <h4 class="tw-text-lg tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-3">Dimension Tables</h4>
+                    <dl class="tw-flex-grow tw-space-y-3">
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.date</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Breaks down release dates (day, week, month, etc.) for time-based analysis.</dd>
+                        </div>
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.genre</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Stores the names of various movie genres.</dd>
+                        </div>
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.cpi</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Contains Consumer Price Index (CPI) data for economic context analysis.</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="tw-flex tw-flex-col tw-p-5 tw-bg-gray-100 dark:tw-bg-gray-800 tw-rounded-lg tw-shadow-md">
+                    <h4 class="tw-text-lg tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mb-3">Bridge Table</h4>
+                    <dl class="tw-flex-grow tw-space-y-3">
+                        <div>
+                            <dt class="tw-font-medium tw-text-gray-700 dark:tw-text-gray-300"><code>movies.movie_genre</code></dt>
+                            <dd class="tw-text-sm tw-text-gray-600 dark:tw-text-gray-400">Resolves the many-to-many relationship between movies and genres.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+                
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mt-3 tw-text-justify">
+                This star schema structure allows analysts to easily slice and dice the data—for example, to examine average movie ratings for a specific 'Genre' released in a particular 'Quarter' of a given 'Year', or to correlate box office revenue with CPI trends.
+            </p>
+            
             <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mt-8 tw-mb-4 tw-text-center">
                 Deployment: Running Movielytics with Docker
             </h3>
@@ -325,6 +346,7 @@
             <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
                 Final Thoughts on Movielytics
             </h2>
+            
             <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
                 Revisiting the Movielytics project has been a rewarding experience. It serves as a practical example of how to combine powerful data engineering tools like Apache Airflow for orchestration, Apache Spark for distributed processing, and Amazon Redshift for data warehousing to build a functional and scalable solution for movie analytics.
             </p>
@@ -343,7 +365,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] tw-text-gray-700 dark:tw-text-gray-300">
         <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
@@ -391,8 +412,8 @@
         </div>
     </footer>
 
-    <script src="../scripts/components.js"></script> 
-    <script src="../index.js"></script> 
+    <script src="../scripts/components.js"></script>
+    <script src="../index.js"></script>
     <script>
         // Ensure proper scrolling behavior
         document.addEventListener('DOMContentLoaded', function() {
