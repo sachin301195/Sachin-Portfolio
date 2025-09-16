@@ -4,78 +4,200 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project: Breast Cancer Detection (CV) | Sachin Bulchandani</title>
-    <meta name="description" content="Computer Vision project for breast cancer detection from mammograms using PyTorch, ResNet18, and deployed on AWS ECS." />
+    <title>Project: E2E Breast Cancer Classifier | Sachin Bulchandani</title>
+    <meta name="description"
+        content="An end-to-end MLOps project to classify breast cancer histopathology images, from data engineering to a live, deployed cloud API with a full CI/CD pipeline." />
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/tailwind-build.css">
-    <link rel="stylesheet" href="../css/index.css" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GTAG_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-YOUR_GTAG_ID'); // Replace G-YOUR_GTAG_ID
-    </script>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
+<body
+    class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
 
     <header
         class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
                 tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
                 tw-items-center tw-justify-between lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]">
-        <!-- Left: Back to Projects button with arrow - added min-width to balance with right side -->
         <div class="tw-w-[120px]">
-            <a href="../index.html#projects" class="tw-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium hover:tw-underline">
+            <a href="../index.html#projects"
+                class="tw-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium hover:tw-underline">
                 <i class="bi bi-arrow-left tw-text-lg"></i>
                 <span class="tw-uppercase">Projects</span>
             </a>
         </div>
-        
-        <!-- Center: Title - now properly centered both visually and structurally -->
         <div class="tw-flex-1 tw-text-center tw-text-base tw-font-semibold">
-            Breast Cancer Detection (CV)
+            Breast Cancer Classifier
         </div>
-        
-        <!-- Right: Dark/Light Theme Toggle - added width container to balance with left side -->
         <div class="tw-w-[120px] tw-flex tw-justify-end">
-            <button
-                type="button"
-                onclick="toggleMode()"
-                class="tw-text-gray-600 dark:tw-text-gray-300"
-                title="toggle-theme"
-                id="theme-toggle"
-            >
+            <button type="button" onclick="toggleMode()" class="tw-text-gray-600 dark:tw-text-gray-300"
+                title="toggle-theme" id="theme-toggle">
                 <i class="bi bi-sun" id="toggle-mode-icon"></i>
             </button>
         </div>
     </header>
 
-    <!-- Spacer div to create room below fixed header -->
     <div style="height: 100px;" class="lg:tw-h-[120px]"></div>
-    
-    <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto"> 
-        <!-- Project Header Section -->
+
+    <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto">
         <div class="tw-mb-12 tw-text-center">
-            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Breast Cancer Detection (Computer Vision)</h1>
-            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">Fine-tuning ResNet18 for early detection from mammograms, with Streamlit UI and AWS ECS deployment.</p>
+            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">End-to-End Breast Cancer Histopathology Classifier</h1>
+            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">A project to build a professional,
+                end-to-end machine learning system—from raw data to a live, cloud-deployed application with a full
+                CI/CD pipeline.</p>
         </div>
 
-        <!-- Main Content Card -->
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
-            <div class="tw-prose dark:tw-prose-invert tw-max-w-none">
-                <p class="tw-text-center tw-text-gray-900 dark:tw-text-gray-100">Live Model and Content will be added soon.</p>
+
+            <div class="tw-text-center tw-mb-10">
+                <a href="breast-cancer-classifier-demo.html" target="_blank"
+                    class="btn !tw-bg-red-600 !tw-text-white !tw-font-semibold !tw-px-8 !tw-py-3 !tw-rounded-xl hover:!tw-bg-red-700 tw-transition-colors tw-duration-300 tw-inline-flex tw-items-center tw-gap-2">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Try the Live Demo
+                </a>
             </div>
+
+            <h2
+                class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-2 tw-mb-6 tw-text-center">
+                Project Overview
+            </h2>
+            <div class="tw-flow-root">
+                <figure class="tw-w-full sm:tw-w-[45%] md:tw-w-[50%] sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                    <img src="../assets/images/Projects/Breast-cancer-High-Level-Arch.svg"
+                        alt="High-Level MLOps Architecture Diagram"
+                        class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-2">
+                    <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                        Fig: High-Level MLOps architecture.
+                    </figcaption>
+                </figure>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    This project demonstrates a complete, end-to-end MLOps workflow for deploying a computer vision model
+                    as a scalable, public-facing inference service. The focus was on the operational lifecycle of a machine
+                    learning model: from experiment tracking and data versioning to containerization and automated deployment.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    As illustrated in the high-level architecture diagram, the system is designed for full automation. A developer pushes code to GitHub and data/models via DVC. This triggers a GitHub Actions pipeline that builds a container, pushes it to Google's Artifact Registry, and deploys it as a live API on Cloud Run, which is then accessed by the end-user.
+                </p>
+                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                    The chosen tech stack emphasizes robustness and efficiency. FastAPI provides a high-performance API layer, Docker ensures a consistent runtime environment, and Google Cloud Run offers a cost-effective, auto-scaling deployment target. This case study showcases the best practices for bringing an ML model from a research notebook to a reliable, production-ready application that delivers real-time predictions.
+                </p>
+                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                    This automated approach stands in contrast to manual deployment methods, which are often slow, prone to human error, and difficult to reproduce. By codifying the entire process from data to deployment, the system gains immense value in terms of reliability and development velocity, treating the machine learning model as a true software product rather than a static research artifact.
+                </p>
+            </div>
+
+            <h2
+                class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Key Features & Technologies
+            </h2>
+
+            <div class="tw-space-y-8">
+                <div>
+                    <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
+                        Containerized & Scalable Deployment
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                        The fine-tuned ResNet50V2 model was packaged with a FastAPI backend into a lightweight Docker
+                        container. This container was deployed to Google Cloud Run, a fully managed serverless platform.
+                        This architecture provides automatic scaling to handle variable traffic (from zero to thousands
+                        of requests), eliminates infrastructure management overhead, and ensures high availability
+                        without the need to provision or manage servers.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
+                        CI/CD for Zero-Downtime Updates
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                        A complete CI/CD pipeline was established using GitHub Actions. As shown in the flowchart below, every push to the main
+                        branch automatically triggers the process to build a new Docker image, push it to
+                        the Google Artifact Registry, and deploy the new version to Cloud Run. This enables rapid,
+                        reliable, and zero-downtime updates to the production service, a cornerstone of modern DevOps
+                        practice.
+                    </p>
+                    <figure class="tw-my-8">
+                        <img src="../assets/images/Projects/CI_CD diagram _ BreastCancer-CV.svg"
+                            alt="CI/CD Pipeline Flowchart"
+                            class="tw-w-full tw-max-w-2xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
+                        <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                            Fig: The automated CI/CD workflow from Git push to live deployment.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
+                        100% Reproducible ML with DVC
+                    </h3>
+                    <div class="tw-flow-root">
+                        <figure class="tw-my-4 sm:tw-w-full md:tw-w-1/2 sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                            <img src="../assets/images/Projects/Data-Versioning-BreastCancerCV.svg"
+                                alt="Data Versioning with DVC vs. Git Only"
+                                class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
+                            <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                                Fig: Tracking artifacts with Git-only vs. Git with DVC.
+                            </figcaption>
+                        </figure>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                            A common challenge in ML is versioning large datasets and models, as Git is not designed for them. This often leads to an incomplete and non-reproducible project history. To solve this, I integrated Data Version Control (DVC) into the workflow. As the diagram illustrates, DVC works alongside Git to track large files by saving small pointer files in the Git repository while the actual data is stored in a remote location. This crucial MLOps practice ensures
+                            100% reproducibility, allowing any version of the project to be audited or retrained with the exact data and artifacts it was originally built with.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
+                        Data Integrity via Patient-Level Splitting
+                    </h3>
+                    <div class="tw-flow-root">
+                         <figure class="tw-my-4 sm:tw-w-full md:tw-w-1/2 sm:tw-float-right sm:tw-ml-6 tw-mb-4">
+                            <img src="../assets/images/Projects/Data-Split-BreastCancer-CV.svg"
+                                alt="Patient-Level vs. Image-Level Data Split Diagram"
+                                class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
+                            <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                                Fig: Correct (patient-level) vs. incorrect (image-level) data splitting.
+                            </figcaption>
+                        </figure>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                            To prevent data leakage and ensure a realistic evaluation of the model's performance, a strict
+                            patient-level data split was enforced during the ETL phase. The accompanying visual demonstrates this vital concept: by splitting the dataset based on unique patient IDs rather than individual images, we guarantee that the model is
+                            tested on images from entirely unseen patients. This provides a trustworthy measure of its ability
+                            to generalize in a real-world clinical scenario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
+                Conclusion and Key Takeaways
+            </h2>
+            <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
+                This project successfully transitioned a machine learning concept from a local prototype to a
+                fully-realized, production-ready cloud application. It was a comprehensive exercise in MLOps,
+                highlighting the importance of each step—from careful data handling to automated deployment—in building
+                reliable and scalable AI systems. The final result is not just a model that can classify images, but a
+                complete, automated system that can be continuously improved and maintained with confidence.
+            </p>
+            <blockquote
+                class="tw-mt-8 tw-mb-6 tw-p-4 tw-italic tw-border-l-4 tw-border-blue-500 dark:tw-border-blue-400 tw-bg-gray-100 dark:tw-bg-gray-800 tw-text-gray-700 dark:tw-text-gray-300 tw-rounded-r-md">
+                <p class="tw-mb-0">"The journey from a model in a notebook to a model in production is the essence of
+                    MLOps."</p>
+            </blockquote>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] tw-text-gray-700 dark:tw-text-gray-300">
+    <footer
+        class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] tw-text-gray-700 dark:tw-text-gray-300">
         <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
                 <a href="../index.html" class="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
-                    <img src="../assets/logo/logo.png" alt="Sachin Bulchandani Logo" srcset="" class="tw-max-w-[120px] dark:tw-invert"/>
+                    <img src="../assets/logo/logo.png" alt="Sachin Bulchandani Logo" srcset=""
+                        class="tw-max-w-[120px] dark:tw-invert" />
                     <div class="tw-max-w-[120px] tw-text-center tw-text-3xl tw-h-fit">
                         Sachin B
                     </div>
@@ -118,25 +240,8 @@
         </div>
     </footer>
 
-    <script src="../scripts/components.js"></script> 
-    <script src="../index.js"></script> 
-    <script>
-        // Ensure proper scrolling behavior
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
+    <script src="../scripts/components.js"></script>
+    <script src="../index.js"></script>
 </body>
+
 </html>
