@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project: E2E Breast Cancer Classifier | Sachin Bulchandani</title>
+    <title>Project: Production-Grade ML System for Cancer Classification | Sachin Bulchandani</title>
     <meta name="description"
-        content="An end-to-end MLOps project to classify breast cancer histopathology images, from data engineering to a live, deployed cloud API with a full CI/CD pipeline." />
+        content="A case study on building and deploying a production-ready MLOps system on Google Cloud for a deep learning model." />
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/tailwind-build.css">
     <link rel="stylesheet" href="../css/index.css" />
@@ -20,7 +20,7 @@
     class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
 
     <header
-        class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+        class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full
                 tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
                 tw-items-center tw-justify-between lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]">
         <div class="tw-w-[120px]">
@@ -45,10 +45,8 @@
 
     <main class="tw-pb-12 tw-px-4 tw-max-w-5xl tw-mx-auto">
         <div class="tw-mb-12 tw-text-center">
-            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">End-to-End Breast Cancer Histopathology Classifier</h1>
-            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">A project to build a professional,
-                end-to-end machine learning system—from raw data to a live, cloud-deployed application with a full
-                CI/CD pipeline.</p>
+            <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Case Study: Production-Grade ML System for Breast Cancer Classification on GCP</h1>
+            <p class="tw-text-gray-600 dark:tw-text-gray-400 tw-text-lg">I architected and built this production-ready MLOps system to serve a deep learning model as a scalable, serverless API on Google Cloud. My primary focus was on the cloud engineering and automation required to deliver a reliable, production-grade service, moving far beyond a theoretical model to a real-world application.</p>
         </div>
 
         <div class="tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl tw-p-8 tw-shadow-lg">
@@ -66,64 +64,66 @@
                 Project Overview
             </h2>
             <div class="tw-flow-root">
-                <figure class="tw-w-full sm:tw-w-[45%] md:tw-w-[50%] sm:tw-float-left sm:tw-mr-6 tw-mb-4">
-                    <img src="../assets/images/Projects/Breast-cancer-High-Level-Arch.svg"
+                <figure class="tw-w-full sm:tw-w-[100%] md:tw-w-[100%] sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                    <img src="../assets/images/Projects/mlops-architecture-gcp.drawio.svg"
                         alt="High-Level MLOps Architecture Diagram"
                         class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-2">
                     <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
-                        Fig: High-Level MLOps architecture.
+                        Fig: High-level overview of the entire system, from code commit to live API endpoint.
                     </figcaption>
                 </figure>
                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                    This project demonstrates a complete, end-to-end MLOps workflow for deploying a computer vision model
-                    as a scalable, public-facing inference service. The focus was on the operational lifecycle of a machine
-                    learning model: from experiment tracking and data versioning to containerization and automated deployment.
-                </p>
-                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                    As illustrated in the high-level architecture diagram, the system is designed for full automation. A developer pushes code to GitHub and data/models via DVC. This triggers a GitHub Actions pipeline that builds a container, pushes it to Google's Artifact Registry, and deploys it as a live API on Cloud Run, which is then accessed by the end-user.
-                </p>
-                <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                    The chosen tech stack emphasizes robustness and efficiency. FastAPI provides a high-performance API layer, Docker ensures a consistent runtime environment, and Google Cloud Run offers a cost-effective, auto-scaling deployment target. This case study showcases the best practices for bringing an ML model from a research notebook to a reliable, production-ready application that delivers real-time predictions.
-                </p>
-                 <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
-                    This automated approach stands in contrast to manual deployment methods, which are often slow, prone to human error, and difficult to reproduce. By codifying the entire process from data to deployment, the system gains immense value in terms of reliability and development velocity, treating the machine learning model as a true software product rather than a static research artifact.
+                    As a case study in production-grade machine learning, I architected this end-to-end system with a primary focus on cloud engineering and automation to move beyond a theoretical model to a real-world application. The high-level architecture, shown in the diagram, illustrates the result: a fully automated pipeline where a `git push` triggers the build, containerization, and deployment of the application to Google Cloud Run with zero downtime. This provides a seamless integration of development, deployment, and serving environments, delivering a reliable and scalable service.
                 </p>
             </div>
 
             <h2
                 class="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-gray-800 dark:tw-text-gray-100 tw-mt-10 tw-mb-6 tw-text-center">
-                Key Features & Technologies
+                Core MLOps & Cloud Architecture
             </h2>
 
             <div class="tw-space-y-8">
                 <div>
                     <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
-                        Containerized & Scalable Deployment
+                        1. Artifact Management: A Real-World Pivot
                     </h3>
-                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
-                        The fine-tuned ResNet50V2 model was packaged with a FastAPI backend into a lightweight Docker
-                        container. This container was deployed to Google Cloud Run, a fully managed serverless platform.
-                        This architecture provides automatic scaling to handle variable traffic (from zero to thousands
-                        of requests), eliminates infrastructure management overhead, and ensures high availability
-                        without the need to provision or manage servers.
-                    </p>
+                    <div class="tw-flow-root">
+                        <figure class="tw-my-4 sm:tw-w-full md:tw-w-1/2 sm:tw-float-left sm:tw-mr-6 tw-mb-4">
+                            <img src="../assets/images/Projects/artifact-management-pivot Diagram.drawio.svg"
+                                alt="Diagram showing the pivot from a blocked DVC pipeline to a successful Git LFS pipeline"
+                                class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
+                            <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
+                                Fig: Adapting the artifact strategy to solve a cloud integration issue.
+                            </figcaption>
+                        </figure>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify tw-mb-4">
+                            A cornerstone of any robust MLOps strategy is the effective management of large artifacts like trained models, which cannot be stored directly in Git. My initial, well-architected approach was to use <strong>Data Version Control (DVC)</strong> to track the model file, with the artifact itself stored remotely in Google Drive. This professional setup decouples the model from the codebase, keeps the repository lightweight, and ensures reproducibility—a perfect solution in theory.
+                        </p>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify tw-mb-4">
+                            However, during the implementation of the CI/CD pipeline, I encountered a critical, non-obvious failure: the automated deployment jobs were consistently failing with authentication errors when trying to pull the model from Google Drive. After a thorough investigation into the GitHub Actions logs and GCP IAM policies, I diagnosed the root cause: a silent, unannounced security policy update by Google had begun blocking <strong>Service Accounts</strong>—the non-human users essential for automation—from accessing personal Google Drive storage via the API. This complex cloud integration issue rendered the initial architecture unworkable.
+                        </p>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                            Faced with this production-level roadblock, I pivoted my strategy. Instead of abandoning the principle of artifact versioning, I transitioned to the industry-standard and highly reliable alternative: <strong>Git Large File Storage (LFS)</strong>. This required reconfiguring the repository to track the model file with Git LFS and updating the CI/CD pipeline's checkout step to use the `lfs: true` flag, ensuring the large file was correctly pulled during the automated build. This strategic pivot not only solved the immediate deployment blocker but also aligned the project with common enterprise practices. This experience was a valuable lesson in troubleshooting opaque cloud integration issues and demonstrates my ability to adapt technical strategies to overcome external constraints while maintaining a project's core architectural integrity.
+                        </p>
+                    </div>
                 </div>
 
                 <div>
                     <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
-                        CI/CD for Zero-Downtime Updates
+                        2. CI/CD Automation with GitHub Actions
                     </h3>
                     <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-mb-4 tw-text-justify">
-                        A complete CI/CD pipeline was established using GitHub Actions. As shown in the flowchart below, every push to the main
-                        branch automatically triggers the process to build a new Docker image, push it to
-                        the Google Artifact Registry, and deploy the new version to Cloud Run. This enables rapid,
-                        reliable, and zero-downtime updates to the production service, a cornerstone of modern DevOps
-                        practice.
+                        I engineered a complete CI/CD pipeline using GitHub Actions to eliminate manual deployment and ensure consistency. The workflow is as follows:
+                        <ul class="tw-list-disc tw-pl-5 tw-mt-4">
+                            <li><b>Trigger:</b> The pipeline is automatically initiated by a git push to the main branch.</li>
+                            <li><b>Build:</b> It securely checks out the source code, using the LFS flag to pull the full model file. It then builds a Docker image of the FastAPI application.</li>
+                            <li><b>Store & Deploy:</b> The workflow authenticates with Google Cloud, pushes the container image to a secure Google Artifact Registry, and then deploys the new version to Google Cloud Run. This serverless architecture ensures the application scales automatically based on demand.</li>
+                        </ul>
                     </p>
                     <figure class="tw-my-8">
-                        <img src="../assets/images/Projects/CI_CD diagram _ BreastCancer-CV.svg"
+                        <img src="../assets/images/Projects/cicd-pipeline-github-actions.svg"
                             alt="CI/CD Pipeline Flowchart"
-                            class="tw-w-full tw-max-w-2xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
+                            class="tw-w-full tw-max-w-3xl tw-mx-auto tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
                         <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
                             Fig: The automated CI/CD workflow from Git push to live deployment.
                         </figcaption>
@@ -132,28 +132,24 @@
 
                 <div>
                     <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
-                        100% Reproducible ML with DVC
+                        3. Containerization & API Serving
                     </h3>
-                    <div class="tw-flow-root">
-                        <figure class="tw-my-4 sm:tw-w-full md:tw-w-1/2 sm:tw-float-left sm:tw-mr-6 tw-mb-4">
-                            <img src="../assets/images/Projects/Data-Versioning-BreastCancerCV.svg"
-                                alt="Data Versioning with DVC vs. Git Only"
-                                class="tw-w-full tw-rounded-lg tw-shadow-sm tw-object-contain tw-bg-white dark:tw-bg-gray-200 tw-p-4">
-                            <figcaption class="tw-text-center tw-text-sm tw-text-gray-500 dark:tw-text-gray-400 tw-mt-2">
-                                Fig: Tracking artifacts with Git-only vs. Git with DVC.
-                            </figcaption>
-                        </figure>
-                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
-                            A common challenge in ML is versioning large datasets and models, as Git is not designed for them. This often leads to an incomplete and non-reproducible project history. To solve this, I integrated Data Version Control (DVC) into the workflow. As the diagram illustrates, DVC works alongside Git to track large files by saving small pointer files in the Git repository while the actual data is stored in a remote location. This crucial MLOps practice ensures
-                            100% reproducibility, allowing any version of the project to be audited or retrained with the exact data and artifacts it was originally built with.
-                        </p>
-                    </div>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                        The entire application is a self-contained, portable artifact.
+                        <ul class="tw-list-disc tw-pl-5 tw-mt-4">
+                            <li><b>Docker:</b> I used Docker to containerize the application, packaging the Python environment, dependencies, and the model itself. This guarantees environmental consistency from local development to cloud production.</li>
+                            <li><b>FastAPI:</b> I served the model via a high-performance FastAPI endpoint, which provides a clean interface and automatic interactive documentation for the live API.</li>
+                        </ul>
+                    </p>
                 </div>
 
                 <div>
                     <h3 class="tw-text-xl md:tw-text-2xl tw-font-medium tw-text-gray-700 dark:tw-text-gray-200 tw-mb-3">
-                        Data Integrity via Patient-Level Splitting
+                        Delivering a High-Value Model
                     </h3>
+                     <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                        The value of this MLOps system is defined by the quality of the model it serves. I engineered a classifier that successfully overcame the core challenges of the medical imaging dataset.
+                     </p>
                     <div class="tw-flow-root">
                          <figure class="tw-my-4 sm:tw-w-full md:tw-w-1/2 sm:tw-float-right sm:tw-ml-6 tw-mb-4">
                             <img src="../assets/images/Projects/Data-Split-BreastCancer-CV.svg"
@@ -164,10 +160,10 @@
                             </figcaption>
                         </figure>
                         <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
-                            To prevent data leakage and ensure a realistic evaluation of the model's performance, a strict
-                            patient-level data split was enforced during the ETL phase. The accompanying visual demonstrates this vital concept: by splitting the dataset based on unique patient IDs rather than individual images, we guarantee that the model is
-                            tested on images from entirely unseen patients. This provides a trustworthy measure of its ability
-                            to generalize in a real-world clinical scenario.
+                           <b>Data Integrity and Model Training:</b> I implemented a strict patient-level data split to prevent data leakage and ensure trustworthy performance metrics. To combat a severe class imbalance in the dataset, I used a BinaryFocalCrossentropy loss function and a two-stage fine-tuning strategy for a ResNet50V2 architecture.
+                        </p>
+                        <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-text-justify">
+                           <b>Systematic Experimentation:</b> Every training run was tracked with MLflow, allowing me to systematically compare results and select the optimal model for deployment. The result was a highly effective classifier with near-perfect metrics, ensuring the system I built delivers a valuable and reliable prediction service. The final model achieved an <b>AUC of 1.0</b> and <b>Precision of 1.0</b> on the held-out test set.
                         </p>
                     </div>
                 </div>
