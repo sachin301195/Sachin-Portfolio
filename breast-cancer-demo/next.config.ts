@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/predict',
-        destination: 'https://breast-cancer-classifier-120059375610.northamerica-northeast2.run.app/predict',
+        destination: 'https://breast-cancer-classifier-120059375610.northamerica-northeast2.run.app/predict/',
       },
     ]
   },
