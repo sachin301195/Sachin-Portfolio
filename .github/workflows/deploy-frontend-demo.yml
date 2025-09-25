@@ -48,4 +48,5 @@ jobs:
             --region=${{ env.REGION }} \
             --memory=512Mi \
             --allow-unauthenticated \
+            --set-env-vars="LAST_DEPLOYMENT_SHA=${{ github.sha }}" \
             --format="value(status.url)"
