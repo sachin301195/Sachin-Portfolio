@@ -63,7 +63,8 @@ export function CancerClassificationPage() {
     }
     
     try {
-      const response = await fetch(imagePath);
+      const fullImageUrl = new URL(imagePath, window.location.origin).href;
+      const response = await fetch(fullImageUrl);
       const blob = await response.blob();
       const fileName = imagePath.split("/").pop() || "sample.png";
       const file = new File([blob], fileName, { type: blob.type });
