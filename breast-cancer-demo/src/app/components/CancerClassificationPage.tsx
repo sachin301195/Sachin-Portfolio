@@ -88,7 +88,7 @@ export function CancerClassificationPage() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("https://breast-cancer-classifier-120059375610.northamerica-northeast2.run.app/predict", {
+      const response = await fetch("/api/predict", {
         method: "POST",
         body: formData,
       });
