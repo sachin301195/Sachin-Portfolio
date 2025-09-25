@@ -6,14 +6,14 @@ import { useDropzone } from "react-dropzone";
 // UPDATED: Expanded sample images array for all 8 images
 const sampleImages = [
   { name: "Select a sample...", path: "" },
-  { name: "Benign Sample 1", path: "/samples/benign_1.png" },
-  { name: "Benign Sample 2", path: "/samples/benign_2.png" },
-  { name: "Benign Sample 3", path: "/samples/benign_3.png" },
-  { name: "Benign Sample 4", path: "/samples/benign_4.png" },
-  { name: "Malignant Sample 1", path: "/samples/malignant_1.png" },
-  { name: "Malignant Sample 2", path: "/samples/malignant_2.png" },
-  { name: "Malignant Sample 3", path: "/samples/malignant_3.png" },
-  { name: "Malignant Sample 4", path: "/samples/malignant_4.png" },
+  { name: "Benign Sample 1", path: "/samples/Benign_1.png" },
+  { name: "Benign Sample 2", path: "/samples/Benign_2.png" },
+  { name: "Benign Sample 3", path: "/samples/Benign_3.png" },
+  { name: "Benign Sample 4", path: "/samples/Benign_4.png" },
+  { name: "Malignant Sample 1", path: "/samples/Malignant_1.png" },
+  { name: "Malignant Sample 2", path: "/samples/Malignant_2.png" },
+  { name: "Malignant Sample 3", path: "/samples/Malignant_3.png" },
+  { name: "Malignant Sample 4", path: "/samples/Malignant_4.png" },
 ];
 
 export function CancerClassificationPage() {
