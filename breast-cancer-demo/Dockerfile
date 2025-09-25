@@ -2,25 +2,26 @@ FROM node:18-alpine3.19 AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . .
 
 RUN npm install
 
-COPY . .
-
 RUN npm run build
 
-FROM nginx:1.25.4-alpine
+FROM node:18-alpine AS runner
+WORKDIR /app
 
-RUN apk update && apk upgrade --no-cache
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nexths:nodejs /app/.next/static ./.next/static
 
-COPY --from=builder /app/out /usr/share/nginx/html
+# Set the user to a non-root user for security
+USER nextjs
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 3000
 
-COPY run.sh /run.sh
-RUN chmod +x /run.sh
+# Set the PORT environment variable that Cloud Run expects
+ENV PORT 3000
 
-EXPOSE 8080
-
-CMD ["/run.sh"]
+# Start the Node.js server
+CMD ["node", "server.js"]
