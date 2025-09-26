@@ -168,6 +168,10 @@ export function CancerClassificationPage() {
                 {isLoading ? "Classifying..." : "Classify Image"}
               </button>
 
+              <p className="text-xs text-center text-red-600 dark:text-red-400 mt-2 px-4">
+                <strong>Note:</strong> The initial request may take up to 20 seconds to process due to a serverless function "cold start." Subsequent predictions will be near-instant.
+              </p>
+
               {/* Results Dashboard - Appears Below */}
               {(result || isLoading || error) && (
                 <div className="mt-6">
