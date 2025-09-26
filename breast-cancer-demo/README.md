@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend: Breast Cancer Classifier Demo
 
-## Getting Started
+This directory contains the source code for the frontend application of the end-to-end Breast Cancer Classifier project. It is a modern, responsive web application built with Next.js and React, providing an interactive user interface for the machine learning model.
 
-First, run the development server:
+**Live Demo:** [https://breast-cancer-demo-frontend-120059375610.northamerica-northeast2.run.app/](https://breast-cancer-demo-frontend-120059375610.northamerica-northeast2.run.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The primary role of this application is to serve as the user-facing client for the ML model. It allows users to either upload their own histopathology image or select a pre-loaded sample. The application then sends the image to the backend API for classification and displays the prediction result in a clear and intuitive dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Key Features & Technical Details
 
-## Learn More
+* **Framework**: Built with **Next.js 15** and **React 19** for a fast, server-rendered user experience.
+* **Styling**: Styled with **Tailwind CSS** for a clean, responsive, and modern design that works on all devices.
+* **API Communication**: To ensure secure and seamless communication with the backend, this application uses a **Next.js rewrite**. All API calls to `/api/predict` are proxied through the frontend's server to the backend Cloud Run service. This approach elegantly solves potential CORS and mixed-content issues.
+* **Deployment**: The application is containerized using a multi-stage **Dockerfile** and automatically deployed to **Google Cloud Run** via a **GitHub Actions** CI/CD pipeline located in the parent repository's `.github/workflows` directory.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started (Local Development)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run this frontend application on your local machine, follow these steps:
 
-## Deploy on Vercel
+1.  **Navigate to this directory**:
+    ```bash
+    cd breast-cancer-demo
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Run the Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and go to [http://localhost:3000](http://localhost:3000) to see the application running.
+
+*Note: For the classification feature to work locally, the backend service must also be running and accessible.*
